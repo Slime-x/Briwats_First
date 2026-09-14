@@ -23,3 +23,7 @@ position = Vector2(0, -100)
 position_smoothing_enabled = true
 
 [node name="hook" type="RayCast2D" parent="." unique_id=2045702476]
+
+[node name="rope" type="Line2D" parent="." unique_id=1969815228]
+width = 4.0
+default_color = Color(0.21, 0.1295, 0, 1)

@@ -40,3 +40,6 @@ func shoot_hook():
 	if $hook.is_colliding():
 		hooked = true
 		hook_position = $hook.get_collision_point()
+func release_hook():
+	hooked = false
+	$rope.clear_points()
