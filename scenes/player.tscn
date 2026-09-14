@@ -21,3 +21,5 @@ shape = SubResource("RectangleShape2D_qtct1")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1924119049]
 position = Vector2(0, -100)
 position_smoothing_enabled = true
+
+[node name="hook" type="RayCast2D" parent="." unique_id=2045702476]
