@@ -4,7 +4,7 @@
 
 [sub_resource type="Theme" id="Theme_1xn0x"]
 
-[node name="ApiKeyPrompt" type="PopupPanel"]
+[node name="ApiKeyPrompt" type="PopupPanel" unique_id=1516504488]
 title = "API key configuration"
 initial_position = 1
 size = Vector2i(350, 100)
@@ -13,7 +13,7 @@ content_scale_aspect = 4
 content_scale_stretch = 1
 theme = SubResource("Theme_qedjm")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=918608310]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -27,10 +27,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = SubResource("Theme_1xn0x")
 
-[node name="HBoxContainerTop" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainerTop" type="HBoxContainer" parent="VBoxContainer" unique_id=651280537]
 layout_mode = 2
 
-[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainerTop"]
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/HBoxContainerTop" unique_id=1516806855]
 custom_minimum_size = Vector2(200, 25)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -39,16 +39,16 @@ placeholder_text = "Provide Your Wakatime API Key"
 expand_to_text_length = true
 secret = true
 
-[node name="ShowButton" type="Button" parent="VBoxContainer/HBoxContainerTop"]
+[node name="ShowButton" type="Button" parent="VBoxContainer/HBoxContainerTop" unique_id=710800344]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 text = "Show"
 
-[node name="HBoxContainerBottom" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainerBottom" type="HBoxContainer" parent="VBoxContainer" unique_id=1082455809]
 layout_mode = 2
 
-[node name="SubmitButton" type="Button" parent="VBoxContainer/HBoxContainerBottom"]
+[node name="SubmitButton" type="Button" parent="VBoxContainer/HBoxContainerBottom" unique_id=1388927835]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 0
