@@ -16,9 +16,27 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 
-	var direction = get_global_mouse_position() - global_position
-	direction = direction.normalized()
-	$hook.target_position = direction * 1000
+	# This aims for the hook 
+	var hook_direction = get_global_mouse_position() - global_position
+	hook_direction = hook_direction.normalized()
+	$hook.target_position = hook_direction * 1000
+	
+	
+	# NOrmal Movement
+	var direction := Input.get_axis("move_left", "move_right")
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	#Draw Rope
+	if hooked:
+		$rope.points = PackedVector2Array([
+			Vector2.ZERO,
+			$rope.to_local(hook_position)
+		])
+	else:
+		$rope.clear_points()
 	
 	
 	# Falls off the map
@@ -29,9 +47,9 @@ func _physics_process(delta: float) -> void:
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("hook"):
-		pass
+		shoot_hook()
 	if event.is_action_released("hook"):
-		pass
+		release_hook()
 		
 func shoot_hook():
 	$hook.target_position = (get_global_mouse_position() - global_position).limit_length(1000)
@@ -40,6 +58,7 @@ func shoot_hook():
 	if $hook.is_colliding():
 		hooked = true
 		hook_position = $hook.get_collision_point()
+		
 func release_hook():
 	hooked = false
 	$rope.clear_points()
