@@ -1,10 +1,11 @@
 [gd_scene format=4 uid="uid://cilyd4pt0enea"]
 
-[ext_resource type="Texture2D" uid="uid://c67r0aikn1x3j" path="res://assets/tilemap_packed.png" id="1_y0xe8"]
-[ext_resource type="PackedScene" uid="uid://jydusco7j6c5" path="res://scenes/player.tscn" id="2_r40rm"]
+[ext_resource type="Texture2D" uid="uid://c67r0aikn1x3j" path="res://assets/tilemap_packed.png" id="1_nsmo0"]
+[ext_resource type="PackedScene" uid="uid://jydusco7j6c5" path="res://scenes/player.tscn" id="2_8y2od"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r40rm"]
-texture = ExtResource("1_y0xe8")
+texture = ExtResource("1_nsmo0")
+texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -231,13 +232,15 @@ texture = ExtResource("1_y0xe8")
 21:9/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_bx3dq"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
 sources/0 = SubResource("TileSetAtlasSource_r40rm")
 
 [node name="TileMapLayer" type="TileMapLayer" unique_id=1078684417]
+position = Vector2(2, -16)
 scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AAAAAP//AAABAAAAAAABAP//AAACAAAAAAACAP//AAACAAAAAAADAP//AAACAAAAAAAEAP//AAACAAAAAAAFAP//AAACAAAAAAAGAP//AAACAAAAAAAHAP//AAACAAAAAAAIAP//AAACAAAAAAAJAP//AAACAAAAAAAKAP//AAACAAAAAAA=")
+tile_map_data = PackedByteArray("AAAAAP//AAABAAAAAAABAP//AAACAAAAAAACAP//AAADAAAAAAADAP//AAACAAAAAAAEAP//AAADAAAAAAAFAP//AAACAAAAAAAGAP//AAADAAAAAAAHAP//AAACAAAAAAAIAP//AAADAAAAAAAJAP//AAACAAAAAAAKAP//AAADAAAAAAALAP//AAABAAAAABAEAAUAAAACAAAAAAAFAAUAAAADAAAAAAAGAAUAAAACAAAAAAAHAAUAAAADAAAAAAAIAAUAAAACAAAAAAAJAAUAAAADAAAAAAAEAAoAAAADAAAAAAAFAAoAAAACAAAAAAAHAAoAAAACAAAAAAAGAAoAAAADAAAAAAAFAA4AAAADAAAAAAAGAA4AAAACAAAAAAAFABEAAAACAAAAAAADAAUAAAADAAAAAAAGABEAAAADAAAAAAAEAAQAAAAIAAMAAAAFAAQAAAAIAAMAAAAGAAQAAAAIAAMAAAAHAAQAAAAIAAMAAAAFAAkAAAAIAAMAAAAGAAkAAAAIAAMAAAACAAUAAAACAAAAAAADAP7/AAAIAAMAAAAEAP7/AAAIAAMAAAAFAP7/AAAIAAMAAAAGAP7/AAAIAAMAAAAHAP7/AAAIAAMAAAAIAP7/AAAIAAMAAAAGAA8AAAAKAAUAAAAGABAAAAAKAAYAAAA=")
 tile_set = SubResource("TileSet_bx3dq")
 
-[node name="player" parent="." unique_id=1786901368 instance=ExtResource("2_r40rm")]
-position = Vector2(31, -30.5)
+[node name="player" parent="." unique_id=1786901368 instance=ExtResource("2_8y2od")]
+position = Vector2(28, -32.5)
+scale = Vector2(0.5, 0.5)
