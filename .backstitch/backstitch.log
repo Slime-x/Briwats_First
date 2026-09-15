@@ -2737,3 +2737,70 @@
 2026-09-15T07:26:22.514163Z  INFO backstitch_rust_core::helpers::tracing: 98: Tracing subscriber initialized
 2026-09-15T07:26:22.514227Z  INFO backstitch_rust_core::interop::extension: 29: ** on_level_init: Scene
 2026-09-15T07:26:22.518716Z  INFO backstitch_rust_core::interop::extension: 46: ** on_level_init: Editor
+2026-09-15T07:40:49.974592Z  INFO backstitch_rust_core::interop::extension: 52: ** on_level_deinit: Editor
+2026-09-15T07:40:49.974721Z  INFO backstitch_rust_core::interop::extension: 70: ** on_level_deinit: Scene
+2026-09-15T07:40:54.597054Z  INFO backstitch_rust_core::helpers::tracing: 98: Tracing subscriber initialized
+2026-09-15T07:40:54.597068Z  INFO backstitch_rust_core::interop::extension: 29: ** on_level_init: Scene
+2026-09-15T07:40:54.601210Z  INFO backstitch_rust_core::interop::extension: 46: ** on_level_init: Editor
+2026-09-15T07:41:08.572675Z  INFO backstitch_rust_core::interop::extension: 52: ** on_level_deinit: Editor
+2026-09-15T07:41:08.572829Z  INFO backstitch_rust_core::interop::extension: 70: ** on_level_deinit: Scene
+2026-09-15T07:41:28.642319Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "/home/slime/Documents/Hack Club/Godot/briwats-first/scenes/game.tscn"
+2026-09-15T07:41:28.647362Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 1 watched changes, attempting to commit...
+2026-09-15T07:41:28.648866Z DEBUG backstitch_rust_core::project::fs::sync_fs_to_automerge: 161: Current changes: {"/home/slime/Documents/Hack Club/Godot/briwats-first/scripts/player.gd": Modified}
+2026-09-15T07:41:28.648983Z  INFO commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 150: Attempting to commit 1 changes...
+2026-09-15T07:41:28.650324Z DEBUG commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 269: Attempting reconcile...
+2026-09-15T07:41:28.650390Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 283: Reconcile starting...
+2026-09-15T07:41:28.652235Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 319: Reconcile completed.
+2026-09-15T07:41:28.652349Z  INFO commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 275: Committed 1 files.
+2026-09-15T07:41:28.652393Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 173: Successfully made a commit! HistoryRef { branch: 2wKZnkmt9Qn5pxaqNfCBNivT2rrA, heads: [ChangeHash("9909517f02f2fddd31856982f42885e81949e3db2fd5fac3259ea5d0e2b56033")] }
+2026-09-15T07:41:28.652980Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 202: Updating branch sync state...
+2026-09-15T07:41:28.653921Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 278: Could not reconcile because we're already up-to-date.
+2026-09-15T07:41:28.667436Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "/home/slime/Documents/Hack Club/Godot/briwats-first/scripts/player.gd"
+2026-09-15T07:41:28.670491Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 1 watched changes, attempting to commit...
+2026-09-15T07:41:28.671450Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 156: Did not commit anything because there's no diff.
+2026-09-15T07:41:28.937364Z  INFO backstitch_rust_core::project::project_base: 91: Ingesting changes...
+2026-09-15T07:41:30.229117Z  INFO backstitch_rust_core::helpers::tracing: 98: Tracing subscriber initialized
+2026-09-15T07:41:30.229143Z  INFO backstitch_rust_core::interop::extension: 29: ** on_level_init: Scene
+2026-09-15T07:41:30.233275Z  INFO backstitch_rust_core::interop::extension: 46: ** on_level_init: Editor
+2026-09-15T07:42:05.253768Z  INFO backstitch_rust_core::interop::extension: 52: ** on_level_deinit: Editor
+2026-09-15T07:42:05.253926Z  INFO backstitch_rust_core::interop::extension: 70: ** on_level_deinit: Scene
+2026-09-15T07:42:09.979113Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "/home/slime/Documents/Hack Club/Godot/briwats-first/scenes/game.tscn"
+2026-09-15T07:42:09.979903Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 1 watched changes, attempting to commit...
+2026-09-15T07:42:09.981377Z DEBUG backstitch_rust_core::project::fs::sync_fs_to_automerge: 161: Current changes: {"/home/slime/Documents/Hack Club/Godot/briwats-first/scripts/player.gd": Modified}
+2026-09-15T07:42:09.981469Z  INFO commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 150: Attempting to commit 1 changes...
+2026-09-15T07:42:09.982624Z DEBUG commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 269: Attempting reconcile...
+2026-09-15T07:42:09.982678Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 283: Reconcile starting...
+2026-09-15T07:42:09.984405Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 319: Reconcile completed.
+2026-09-15T07:42:09.984479Z  INFO commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 275: Committed 1 files.
+2026-09-15T07:42:09.984513Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 173: Successfully made a commit! HistoryRef { branch: 2wKZnkmt9Qn5pxaqNfCBNivT2rrA, heads: [ChangeHash("4f63c6e9042cc5280042166bc277b93116888b28a9884fe33867c474cef767a0")] }
+2026-09-15T07:42:09.985529Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 202: Updating branch sync state...
+2026-09-15T07:42:09.985608Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 278: Could not reconcile because we're already up-to-date.
+2026-09-15T07:42:09.987428Z  INFO backstitch_rust_core::project::project_base: 91: Ingesting changes...
+2026-09-15T07:42:10.004196Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "/home/slime/Documents/Hack Club/Godot/briwats-first/scripts/player.gd"
+2026-09-15T07:42:10.008288Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 1 watched changes, attempting to commit...
+2026-09-15T07:42:10.009849Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 156: Did not commit anything because there's no diff.
+2026-09-15T07:42:12.110548Z  INFO backstitch_rust_core::helpers::tracing: 98: Tracing subscriber initialized
+2026-09-15T07:42:12.110565Z  INFO backstitch_rust_core::interop::extension: 29: ** on_level_init: Scene
+2026-09-15T07:42:12.114887Z  INFO backstitch_rust_core::interop::extension: 46: ** on_level_init: Editor
+2026-09-15T07:43:00.175534Z  INFO backstitch_rust_core::interop::extension: 52: ** on_level_deinit: Editor
+2026-09-15T07:43:00.175679Z  INFO backstitch_rust_core::interop::extension: 70: ** on_level_deinit: Scene
+2026-09-15T07:43:15.180573Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "/home/slime/Documents/Hack Club/Godot/briwats-first/scenes/game.tscn"
+2026-09-15T07:43:15.183954Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 1 watched changes, attempting to commit...
+2026-09-15T07:43:15.185854Z DEBUG backstitch_rust_core::project::fs::sync_fs_to_automerge: 161: Current changes: {"/home/slime/Documents/Hack Club/Godot/briwats-first/scripts/player.gd": Modified}
+2026-09-15T07:43:15.186014Z  INFO commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 150: Attempting to commit 1 changes...
+2026-09-15T07:43:15.187504Z DEBUG commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 269: Attempting reconcile...
+2026-09-15T07:43:15.187581Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 283: Reconcile starting...
+2026-09-15T07:43:15.190729Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 319: Reconcile completed.
+2026-09-15T07:43:15.190832Z  INFO commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 275: Committed 1 files.
+2026-09-15T07:43:15.190873Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 173: Successfully made a commit! HistoryRef { branch: 2wKZnkmt9Qn5pxaqNfCBNivT2rrA, heads: [ChangeHash("51326b03cc15aecfb3d93703d8220270700c1bd9422e082a4681ceea58b4a9eb")] }
+2026-09-15T07:43:15.191455Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 202: Updating branch sync state...
+2026-09-15T07:43:15.192435Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 278: Could not reconcile because we're already up-to-date.
+2026-09-15T07:43:15.193415Z  INFO backstitch_rust_core::project::project_base: 91: Ingesting changes...
+2026-09-15T07:43:15.205764Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "/home/slime/Documents/Hack Club/Godot/briwats-first/scripts/player.gd"
+2026-09-15T07:43:15.206314Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 1 watched changes, attempting to commit...
+2026-09-15T07:43:15.207618Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 156: Did not commit anything because there's no diff.
+2026-09-15T07:43:16.688418Z  INFO backstitch_rust_core::helpers::tracing: 98: Tracing subscriber initialized
+2026-09-15T07:43:16.688435Z  INFO backstitch_rust_core::interop::extension: 29: ** on_level_init: Scene
+2026-09-15T07:43:16.692664Z  INFO backstitch_rust_core::interop::extension: 46: ** on_level_init: Editor
+2026-09-15T07:49:05.424675Z  INFO backstitch_rust_core::interop::extension: 52: ** on_level_deinit: Editor
+2026-09-15T07:49:05.424807Z  INFO backstitch_rust_core::interop::extension: 70: ** on_level_deinit: Scene

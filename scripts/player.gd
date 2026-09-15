@@ -26,9 +26,9 @@ func _physics_process(delta: float) -> void:
 	if hooked:
 		var direction := Input.get_axis("move_left", "move_right")
 		if Input.is_action_pressed("move_left"):
-			velocity.x = direction * 60
+			velocity.x += direction * 2
 		if Input.is_action_pressed("move_right"):
-			velocity.x = direction * 60
+			velocity.x += direction * 2
 
 	# This aims for the hook 
 	var hook_direction = get_global_mouse_position() - global_position
