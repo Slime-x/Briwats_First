@@ -15,10 +15,20 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump"):
-		if hooked:
-			rope_length = max(rope_length - 20 , 20)
-		elif is_on_floor():
 			velocity.y = JUMP_VELOCITY
+			
+	# this is for rope pull when [SPACE] is clicked. Change the minimum length of rope after making player sprite...
+	if hooked and Input.is_action_pressed("ROPE_UP"):
+		rope_length = max(rope_length - 50 * delta , 20)
+	if hooked and Input.is_action_pressed("ROPE_DOWN"):
+		rope_length = max(rope_length + 50 * delta , 20)
+	
+	if hooked:
+		var direction := Input.get_axis("move_left", "move_right")
+		if Input.is_action_pressed("move_left"):
+			velocity.x = direction * 60
+		if Input.is_action_pressed("move_right"):
+			velocity.x = direction * 60
 
 	# This aims for the hook 
 	var hook_direction = get_global_mouse_position() - global_position
@@ -57,7 +67,7 @@ func _physics_process(delta: float) -> void:
 	
 	
 	# Falls off the map
-	if position.y > 1000:
+	if position.y > 2000:
 		position = start_position
 
 	move_and_slide()
@@ -78,4 +88,5 @@ func shoot_hook():
 		
 func release_hook():
 	hooked = false
+	velocity *= 2
 	$rope.clear_points()
