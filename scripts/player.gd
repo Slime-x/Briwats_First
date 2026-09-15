@@ -14,9 +14,14 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
-			
+	
+	
+	#UNCOMMENT THIS AND COMMENT THE _input function and play the game...
+	#if Input.is_action_just_pressed("hook"):
+		#shoot_hook()
+		
 	#if you press jump while hooked then it unhooks..
 	if Input.is_action_just_pressed("jump") and hooked:
 		release_hook()
@@ -77,7 +82,9 @@ func _physics_process(delta: float) -> void:
 		position = start_position
 
 	move_and_slide()
-	
+
+
+#Comment this whole program. 88-92 all. 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("hook"):
 		shoot_hook()
