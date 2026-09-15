@@ -17,33 +17,39 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump"):
 			velocity.y = JUMP_VELOCITY
 			
-	# this is for rope pull when [SPACE] is clicked. Change the minimum length of rope after making player sprite...
+	#if you press jump while hooked then it unhooks..
+	if Input.is_action_just_pressed("jump") and hooked:
+		release_hook()
+		
+	# this is for rope pull. Change the minimum length of rope after making player sprite...
 	if hooked and Input.is_action_pressed("ROPE_UP"):
 		rope_length = max(rope_length - 50 * delta , 20)
 	if hooked and Input.is_action_pressed("ROPE_DOWN"):
 		rope_length = max(rope_length + 50 * delta , 20)
 	
+	# To create momentum while hooked.
 	if hooked:
 		var direction := Input.get_axis("move_left", "move_right")
 		if Input.is_action_pressed("move_left"):
-			velocity.x += direction * 2
+			velocity.x += direction * 2 #Can change (2) for faster or slower momentum.
 		if Input.is_action_pressed("move_right"):
 			velocity.x += direction * 2
 
-	# This aims for the hook 
+	# This aims for the hook.. Even i am not sure how this worked.. LOL
 	var hook_direction = get_global_mouse_position() - global_position
 	hook_direction = hook_direction.normalized()
 	$hook.target_position = hook_direction * 1000
 	
+	# NOrmal Movement
 	if not hooked:
-		# NOrmal Movement
 		var direction := Input.get_axis("move_left", "move_right")
 		if direction:
 			velocity.x = direction * SPEED
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 	
-	# HOOK Pulling when hooked. 
+	
+	# move towards hook position when hooked. 
 	if hooked:
 		var to_hook = hook_position - global_position
 		var distance = to_hook.length() #distance between where to hook.
@@ -56,7 +62,7 @@ func _physics_process(delta: float) -> void:
 			var radial_velocity = velocity.dot(rope_dir) * rope_dir
 			velocity -= radial_velocity
 	
-	#Draw Rope
+	#Draw Rope.. color is changable in node btw. 
 	if hooked:
 		$rope.points = PackedVector2Array([
 			Vector2.ZERO,
@@ -88,5 +94,5 @@ func shoot_hook():
 		
 func release_hook():
 	hooked = false
-	velocity *= 2
+	velocity *= 2 #Change this if you feel velocity increases too much after unhooking. I feel like 1.5 is good but 2 is better while testing. 
 	$rope.clear_points()
