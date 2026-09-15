@@ -7,6 +7,7 @@
 size = Vector2(24, 62.256)
 
 [node name="player" type="CharacterBody2D" unique_id=1786901368]
+z_index = 5
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1789877542]
