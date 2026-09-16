@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://cilyd4pt0enea"]
 
-[ext_resource type="Texture2D" uid="uid://c67r0aikn1x3j" path="res://assets/tilemap_packed.png" id="1_nsmo0"]
-[ext_resource type="PackedScene" uid="uid://jydusco7j6c5" path="res://scenes/player.tscn" id="2_8y2od"]
+[ext_resource type="Texture2D" uid="uid://c67r0aikn1x3j" path="res://assets/tilemap_packed.png" id="1_6malg"]
+[ext_resource type="PackedScene" uid="uid://jydusco7j6c5" path="res://scenes/player.tscn" id="2_6j14n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nsmo0"]
-texture = ExtResource("1_nsmo0")
+texture = ExtResource("1_6malg")
 texture_region_size = Vector2i(18, 18)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
@@ -245,12 +245,12 @@ custom_data_layer_0/name = "is_spike"
 custom_data_layer_0/type = 1
 sources/0 = SubResource("TileSetAtlasSource_nsmo0")
 
-[node name="level4" type="Node2D" unique_id=712970452]
+[node name="level_4" type="Node2D" unique_id=712970452]
 
 [node name="Map" type="TileMapLayer" parent="." unique_id=618674371]
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAD//wIAAAACAAEAAAAAAAIAAAACAAEAAAABAAIAAAACAAEAAAACAAIAAAACAAEAAAADAAIAAAACAAEAAAAEAAIAAAADAAEAAAD9/wIAAAACAAEAAAD+/wIAAAACAAEAAAD8/wIAAAACAAEAAAD7/wIAAAABAAEAAAD9/wcAAAABAAEAAAD+/wcAAAACAAEAAAD//wcAAAACAAEAAAAAAAcAAAACAAEAAAABAAcAAAACAAEAAAACAAcAAAACAAEAAAD//w4AAAACAAEAAAAAAA4AAAACAAEAAAD//xMAAAABAAEAAAAAABMAAAADAAEAAAD+/w4AAAABAAEAAAABAA4AAAADAAEAAAD//wYAAAAIAAMAAAAAAAYAAAAIAAMAAAABAAYAAAAIAAMAAAD//w0AAAAIAAMAAAAAAA0AAAAIAAMAAAD+/wYAAAAIAAMAAAAJAA4AAAAJAAAAAAANABYAAAABAAEAAAAOABYAAAACAAEAAAAPABYAAAADAAEAAAAPABUAAAAKAAYAAAAPABQAAAAKAAUAAAA=")
 tile_set = SubResource("TileSet_qtct1")
 
-[node name="player" parent="." unique_id=1786901368 instance=ExtResource("2_8y2od")]
+[node name="player" parent="." unique_id=1786901368 instance=ExtResource("2_6j14n")]
 position = Vector2(20, 20)

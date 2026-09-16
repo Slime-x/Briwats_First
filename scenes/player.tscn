@@ -1,23 +1,24 @@
 [gd_scene format=3 uid="uid://jydusco7j6c5"]
 
-[ext_resource type="Texture2D" uid="uid://c01oletddmc80" path="res://icon.svg" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bduea1wf48lk4" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://c67r0aikn1x3j" path="res://assets/tilemap_packed.png" id="2_g2els"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qtct1"]
-size = Vector2(24, 62.256)
+[sub_resource type="CircleShape2D" id="CircleShape2D_uwxec"]
 
 [node name="player" type="CharacterBody2D" unique_id=1786901368]
 z_index = 5
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1789877542]
-position = Vector2(0.8640003, -31.256)
-scale = Vector2(0.201, 0.496)
-texture = ExtResource("1_3vyb7")
+position = Vector2(0, -13)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_g2els")
+region_enabled = true
+region_rect = Rect2(90, 127, 18, 17)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1732662105]
-position = Vector2(0.8639989, -31.128)
-shape = SubResource("RectangleShape2D_qtct1")
+position = Vector2(0, -11)
+shape = SubResource("CircleShape2D_uwxec")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1924119049]
 position = Vector2(0, -100)

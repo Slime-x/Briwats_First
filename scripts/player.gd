@@ -7,7 +7,6 @@ const JUMP_VELOCITY = -400.0
 var hooked = false
 var hook_position = Vector2.ZERO
 var rope_length = 0.0
-var level = 0
 
 func _physics_process(delta: float) -> void:
 	
@@ -22,7 +21,7 @@ func _physics_process(delta: float) -> void:
 	#UNCOMMENT THIS AND COMMENT THE _input function and play the game...
 	#if Input.is_action_just_pressed("hook"):
 		#shoot_hook()
-		
+	
 	#if you press jump while hooked then it unhooks..
 	#if Input.is_action_just_pressed("jump") and hooked:
 		#release_hook()
