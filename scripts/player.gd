@@ -6,6 +6,7 @@ const JUMP_VELOCITY = -400.0
 @export var start_position = Vector2(20,20)
 var hooked = false
 var hook_position = Vector2.ZERO
+var rope_length = 0.0
 
 func _physics_process(delta: float) -> void:
 	
@@ -14,22 +15,59 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+			velocity.y = JUMP_VELOCITY
+	
+	
+	#UNCOMMENT THIS AND COMMENT THE _input function and play the game...
+	#if Input.is_action_just_pressed("hook"):
+		#shoot_hook()
+	
+	#if you press jump while hooked then it unhooks..
+	#if Input.is_action_just_pressed("jump") and hooked:
+		#release_hook()
+		
+	# this is for rope pull. Change the minimum length of rope after making player sprite...
+	if hooked and Input.is_action_pressed("ROPE_UP"):
+		rope_length = max(rope_length - 50 * delta , 20)
+	if hooked and Input.is_action_pressed("ROPE_DOWN"):
+		rope_length = max(rope_length + 50 * delta , 20)
+	
+	# To create momentum while hooked.
+	if hooked:
+		var direction := Input.get_axis("move_left", "move_right")
+		if Input.is_action_pressed("move_left"):
+			velocity.x += direction * 2 #Can change (2) for faster or slower momentum.
+		if Input.is_action_pressed("move_right"):
+			velocity.x += direction * 2
 
-	# This aims for the hook 
+	# This aims for the hook.. Even i am not sure how this worked.. LOL
 	var hook_direction = get_global_mouse_position() - global_position
 	hook_direction = hook_direction.normalized()
 	$hook.target_position = hook_direction * 1000
 	
-	
 	# NOrmal Movement
-	var direction := Input.get_axis("move_left", "move_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	if not hooked:
+		var direction := Input.get_axis("move_left", "move_right")
+		if direction:
+			velocity.x = direction * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
 	
-	#Draw Rope
+	
+	# move towards hook position when hooked. 
+	if hooked:
+		var to_hook = hook_position - global_position
+		var distance = to_hook.length() #distance between where to hook.
+		var rope_dir = to_hook.normalized() #dir = directio btw.
+		
+		if distance > rope_length:
+			global_position = hook_position - rope_dir * rope_length
+			
+			#To Swing
+			var radial_velocity = velocity.dot(rope_dir) * rope_dir
+			velocity -= radial_velocity
+	
+	#Draw Rope.. color is changable in node btw. 
 	if hooked:
 		$rope.points = PackedVector2Array([
 			Vector2.ZERO,
@@ -40,11 +78,24 @@ func _physics_process(delta: float) -> void:
 	
 	
 	# Falls off the map
-	if position.y > 1000:
+	if position.y > 2000:
 		position = start_position
 
 	move_and_slide()
 	
+	
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		if collider is TileMapLayer:
+			var local = collider.to_local(collision.get_position())
+			var coords = collider.local_to_map(local)
+			var data = collider.get_cell_tile_data(coords)
+			if data and data.get_custom_data("is_spike"):
+				die()
+
+
+#Comment this whole program. 88-92 all. 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("hook"):
 		shoot_hook()
@@ -54,11 +105,17 @@ func _input(event: InputEvent) -> void:
 func shoot_hook():
 	$hook.target_position = (get_global_mouse_position() - global_position).limit_length(1000)
 	$hook.force_raycast_update()
-	
 	if $hook.is_colliding():
 		hooked = true
 		hook_position = $hook.get_collision_point()
+		rope_length = global_position.distance_to(hook_position)
 		
 func release_hook():
 	hooked = false
+	velocity *= 1.5 #Change this if you feel velocity increases too much after unhooking. I feel like 1.5 is good but 2 is better while testing. 
 	$rope.clear_points()
+	
+func die():
+	release_hook()
+	position = start_position
+	
