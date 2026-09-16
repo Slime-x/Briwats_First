@@ -154,7 +154,9 @@ texture_region_size = Vector2i(18, 18)
 4:5/0 = 0
 4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 5:5/0 = 0
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -5.7227783, 9, -5.722778, 9, 9, -9, 9)
 6:5/0 = 0
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -0.81753826, 9, -0.8175392, 9, 9, -9, 9)
 7:5/0 = 0
 8:5/0 = 0
 9:5/0 = 0
@@ -203,7 +205,9 @@ texture_region_size = Vector2i(18, 18)
 4:7/0 = 0
 5:7/0 = 0
 6:7/0 = 0
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 0.3716097, -9, 0.5202522)
 7:7/0 = 0
+7:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 0.3716097, -9, 0.5202522)
 8:7/0 = 0
 9:7/0 = 0
 10:7/0 = 0
@@ -245,4 +249,5 @@ custom_data_layer_0/type = 1
 sources/0 = SubResource("TileSetAtlasSource_paxxb")
 
 [node name="map" type="TileMapLayer" unique_id=1940241841]
+scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_qtct1")

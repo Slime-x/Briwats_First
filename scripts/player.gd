@@ -7,6 +7,7 @@ const JUMP_VELOCITY = -400.0
 var hooked = false
 var hook_position = Vector2.ZERO
 var rope_length = 0.0
+var level = 0
 
 func _physics_process(delta: float) -> void:
 	
