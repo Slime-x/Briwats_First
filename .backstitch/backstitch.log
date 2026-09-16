@@ -4610,3 +4610,22 @@
 2026-09-16T16:59:56.416284Z  INFO backstitch_rust_core::interop::extension: 46: ** on_level_init: Editor
 2026-09-16T17:00:32.845981Z  INFO backstitch_rust_core::interop::extension: 52: ** on_level_deinit: Editor
 2026-09-16T17:00:32.846117Z  INFO backstitch_rust_core::interop::extension: 70: ** on_level_deinit: Scene
+2026-09-16T17:32:54.812181Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_4.tscn"
+2026-09-16T17:32:54.812373Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_4.tscn~RFb5a046e.TMP"
+2026-09-16T17:32:54.812558Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes"
+2026-09-16T17:32:54.817198Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 2 watched changes, attempting to commit...
+2026-09-16T17:32:54.819819Z DEBUG backstitch_rust_core::project::fs::sync_fs_to_automerge: 161: Current changes: {"C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_4.tscn": Modified}
+2026-09-16T17:32:54.824048Z  INFO commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 150: Attempting to commit 1 changes...
+2026-09-16T17:32:54.852329Z DEBUG commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 269: Attempting reconcile...
+2026-09-16T17:32:54.852423Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 283: Reconcile starting...
+2026-09-16T17:32:54.853139Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 319: Reconcile completed.
+2026-09-16T17:32:54.853191Z  INFO commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 275: Committed 1 files.
+2026-09-16T17:32:54.853225Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 173: Successfully made a commit! HistoryRef { branch: 2wKZnkmt9Qn5pxaqNfCBNivT2rrA, heads: [ChangeHash("aca49e1ee37691e3812da1ff04216ff404b160be682702cb3fa412954a8cdc47")] }
+2026-09-16T17:32:54.853993Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 202: Updating branch sync state...
+2026-09-16T17:32:54.855212Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 278: Could not reconcile because we're already up-to-date.
+2026-09-16T17:32:54.899597Z  INFO backstitch_rust_core::project::project_base: 91: Ingesting changes...
+2026-09-16T19:59:52.097433Z  INFO backstitch_rust_core::project::driver: 464: Sync shutting down
+2026-09-16T19:59:52.097556Z  INFO handle_event{local_peer_id=peer-7748941746552353796}: samod_core::actors::hub::state: 407: stopping hub event loop
+2026-09-16T19:59:52.103636Z DEBUG backstitch_rust_core::interop::godot_project: 1025: ** GodotProjectPlugin: exit_tree
+2026-09-16T19:59:53.577303Z  INFO backstitch_rust_core::interop::extension: 52: ** on_level_deinit: Editor
+2026-09-16T19:59:53.578036Z  INFO backstitch_rust_core::interop::extension: 70: ** on_level_deinit: Scene
