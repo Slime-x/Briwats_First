@@ -23,8 +23,8 @@ func _physics_process(delta: float) -> void:
 		#shoot_hook()
 		
 	#if you press jump while hooked then it unhooks..
-	if Input.is_action_just_pressed("jump") and hooked:
-		release_hook()
+	#if Input.is_action_just_pressed("jump") and hooked:
+		#release_hook()
 		
 	# this is for rope pull. Change the minimum length of rope after making player sprite...
 	if hooked and Input.is_action_pressed("ROPE_UP"):
@@ -82,6 +82,17 @@ func _physics_process(delta: float) -> void:
 		position = start_position
 
 	move_and_slide()
+	
+	
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		if collider is TileMapLayer:
+			var local = collider.to_local(collision.get_position())
+			var coords = collider.local_to_map(local)
+			var data = collider.get_cell_tile_data(coords)
+			if data and data.get_custom_data("is_spike"):
+				die()
 
 
 #Comment this whole program. 88-92 all. 
@@ -101,5 +112,10 @@ func shoot_hook():
 		
 func release_hook():
 	hooked = false
-	velocity *= 2 #Change this if you feel velocity increases too much after unhooking. I feel like 1.5 is good but 2 is better while testing. 
+	velocity *= 1.5 #Change this if you feel velocity increases too much after unhooking. I feel like 1.5 is good but 2 is better while testing. 
 	$rope.clear_points()
+	
+func die():
+	release_hook()
+	position = start_position
+	
