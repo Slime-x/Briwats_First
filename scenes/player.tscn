@@ -5,6 +5,8 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uwxec"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_bx3dq"]
+
 [node name="player" type="CharacterBody2D" unique_id=1786901368]
 z_index = 5
 script = ExtResource("1_g2els")
@@ -30,3 +32,14 @@ collision_mask = 2
 [node name="rope" type="Line2D" parent="." unique_id=1969815228]
 width = 4.0
 default_color = Color(0.21, 0.1295, 0, 1)
+
+[node name="HitBox" type="Area2D" parent="." unique_id=335376835]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1793730104]
+position = Vector2(0, -11)
+shape = SubResource("CircleShape2D_bx3dq")
+debug_color = Color(1, 0.003921569, 0, 0.41960785)
+
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
