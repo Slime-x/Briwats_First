@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bduea1wf48lk4" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://c67r0aikn1x3j" path="res://assets/tilemap_packed.png" id="2_g2els"]
-[ext_resource type="Texture2D" uid="uid://c01oletddmc80" path="res://icon.svg" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://c63tetsxh2wec" path="res://assets/rope.png" id="3_qhqgy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uwxec"]
 
@@ -33,7 +33,7 @@ collision_mask = 2
 [node name="rope" type="Line2D" parent="." unique_id=1969815228]
 width = 4.0
 texture = ExtResource("3_qhqgy")
-texture_mode = 2
+texture_mode = 1
 
 [node name="HitBox" type="Area2D" parent="." unique_id=335376835]
 collision_layer = 0
