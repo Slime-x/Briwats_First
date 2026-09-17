@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://blpw0l31fypo7" path="res://scenes/map.tscn" id="1_gojnm"]
 [ext_resource type="PackedScene" uid="uid://jydusco7j6c5" path="res://scenes/player.tscn" id="2_1c2mv"]
 [ext_resource type="Texture2D" uid="uid://c67r0aikn1x3j" path="res://assets/tilemap_packed.png" id="3_f7g2b"]
+[ext_resource type="Texture2D" uid="uid://c01oletddmc80" path="res://icon.svg" id="4_x4b8f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ptq8"]
 texture = ExtResource("3_f7g2b")
@@ -249,3 +250,8 @@ position = Vector2(1, 0)
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAD9/wYAAAAIAAMAAAD+/wYAAAAIAAMAAAD//wYAAAAIAAMAAAAAAAYAAAAIAAMAAAABAAYAAAAIAAMAAAACAAYAAAAIAAMAAAA=")
 tile_set = SubResource("TileSet_sb12i")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1585237150]
+points = PackedVector2Array(161, -97, 501, -100, 331, -87, 330, -76, 331, -70, 332, -53, 332, -31, 360, -52, 433, -85, 448, -58, 414, -24, 358, 3, 289, -12, 268, -36, 306, -58, 280, -75, 225, -68, 204, -48, 230, -38, 158, -34, 128, -46, 138, -25, 183, -30, 220, -26, 229, -24, 240, -15, 269, -5, 290, -4, 321, 4, 350, 11, 374, 11, 408, 12, 492, -58, 557, -62, 552, -7, 512, 43, 434, 82, 381, 80, 258, 75, 180, 77)
+texture = ExtResource("4_x4b8f")
+texture_mode = 2
