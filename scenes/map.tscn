@@ -160,6 +160,7 @@ texture_region_size = Vector2i(18, 18)
 6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -0.81753826, 9, -0.8175392, 9, 9, -9, 9)
 7:5/0 = 0
 8:5/0 = 0
+8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
 9:5/0 = 0
 10:5/0 = 0
 11:5/0 = 0
@@ -247,6 +248,8 @@ tile_size = Vector2i(18, 18)
 physics_layer_0/collision_layer = 3
 custom_data_layer_0/name = "is_spike"
 custom_data_layer_0/type = 1
+custom_data_layer_1/name = "is_trampoline"
+custom_data_layer_1/type = 1
 sources/0 = SubResource("TileSetAtlasSource_paxxb")
 
 [node name="map" type="TileMapLayer" unique_id=1940241841]
