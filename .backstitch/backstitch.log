@@ -6410,3 +6410,8 @@
 2026-09-17T20:07:46.911133Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 1 watched changes, attempting to commit...
 2026-09-17T20:07:46.913867Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 156: Did not commit anything because there's no diff.
 2026-09-17T20:07:48.363257Z  INFO backstitch_rust_core::project::project_base: 91: Ingesting changes...
+2026-09-17T20:42:56.671618Z  INFO handle_event{local_peer_id=peer-12152287796855220907}: samod_core::actors::hub::state: 407: stopping hub event loop
+2026-09-17T20:42:56.671640Z  INFO backstitch_rust_core::project::driver: 464: Sync shutting down
+2026-09-17T20:42:56.675900Z DEBUG backstitch_rust_core::interop::godot_project: 1025: ** GodotProjectPlugin: exit_tree
+2026-09-17T20:42:57.839762Z  INFO backstitch_rust_core::interop::extension: 52: ** on_level_deinit: Editor
+2026-09-17T20:42:57.840688Z  INFO backstitch_rust_core::interop::extension: 70: ** on_level_deinit: Scene
