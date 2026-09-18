@@ -7104,3 +7104,134 @@
 2026-09-18T11:33:02.131300Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 1 watched changes, attempting to commit...
 2026-09-18T11:33:02.133243Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 156: Did not commit anything because there's no diff.
 2026-09-18T11:33:02.169898Z  INFO backstitch_rust_core::project::project_base: 91: Ingesting changes...
+2026-09-18T11:58:45.658708Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\player.tscn"
+2026-09-18T11:58:45.658900Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\player.tscn"
+2026-09-18T11:58:45.659068Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\player.tscn"
+2026-09-18T11:58:45.659238Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes"
+2026-09-18T11:58:45.660453Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 3 watched changes, attempting to commit...
+2026-09-18T11:58:45.663300Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 156: Did not commit anything because there's no diff.
+2026-09-18T11:58:45.886595Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scripts\\player.gd"
+2026-09-18T11:58:45.886796Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scripts\\player.gd~RF1474be14.TMP"
+2026-09-18T11:58:45.886910Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scripts"
+2026-09-18T11:58:45.889268Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 2 watched changes, attempting to commit...
+2026-09-18T11:58:45.892181Z DEBUG backstitch_rust_core::project::fs::sync_fs_to_automerge: 161: Current changes: {"C:/Users/dnlbi/Downloads/Briwats_first/scripts\\player.gd": Modified}
+2026-09-18T11:58:45.892495Z  INFO commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 150: Attempting to commit 1 changes...
+2026-09-18T11:58:45.894915Z DEBUG commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 269: Attempting reconcile...
+2026-09-18T11:58:45.894967Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 283: Reconcile starting...
+2026-09-18T11:58:45.898615Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 319: Reconcile completed.
+2026-09-18T11:58:45.898670Z  INFO commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 275: Committed 1 files.
+2026-09-18T11:58:45.898708Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 173: Successfully made a commit! HistoryRef { branch: 2wKZnkmt9Qn5pxaqNfCBNivT2rrA, heads: [ChangeHash("8a9e6a42356c5211b978f3beeb7d48a01922a733e4b5a21274c957d392a61669")] }
+2026-09-18T11:58:45.900032Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 202: Updating branch sync state...
+2026-09-18T11:58:45.901769Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 278: Could not reconcile because we're already up-to-date.
+2026-09-18T11:58:46.208227Z  INFO backstitch_rust_core::project::project_base: 91: Ingesting changes...
+2026-09-18T11:58:56.486310Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_2.tscn"
+2026-09-18T11:58:56.486459Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_2.tscn"
+2026-09-18T11:58:56.486582Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_2.tscn"
+2026-09-18T11:58:56.486708Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes"
+2026-09-18T11:58:56.491151Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 3 watched changes, attempting to commit...
+2026-09-18T11:58:56.494917Z DEBUG backstitch_rust_core::project::fs::sync_fs_to_automerge: 161: Current changes: {"C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_2.tscn": Modified}
+2026-09-18T11:58:56.495460Z  INFO commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 150: Attempting to commit 1 changes...
+2026-09-18T11:58:56.499222Z DEBUG commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 269: Attempting reconcile...
+2026-09-18T11:58:56.499261Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 283: Reconcile starting...
+2026-09-18T11:58:56.499595Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 319: Reconcile completed.
+2026-09-18T11:58:56.499639Z  INFO commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 275: Committed 1 files.
+2026-09-18T11:58:56.499667Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 173: Successfully made a commit! HistoryRef { branch: 2wKZnkmt9Qn5pxaqNfCBNivT2rrA, heads: [ChangeHash("a6f7a3ae893876ee9d78d74e44fad4a6108c08f83664abcb9596dd43a0e549d5")] }
+2026-09-18T11:58:56.500732Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 202: Updating branch sync state...
+2026-09-18T11:58:56.501709Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 278: Could not reconcile because we're already up-to-date.
+2026-09-18T11:58:56.592146Z  INFO backstitch_rust_core::project::project_base: 91: Ingesting changes...
+2026-09-18T11:58:58.499761Z  INFO backstitch_rust_core::helpers::tracing: 98: Tracing subscriber initialized
+2026-09-18T11:58:58.499791Z  INFO backstitch_rust_core::interop::extension: 29: ** on_level_init: Scene
+2026-09-18T11:58:58.503958Z  INFO backstitch_rust_core::interop::extension: 46: ** on_level_init: Editor
+2026-09-18T11:59:21.809420Z  INFO backstitch_rust_core::interop::extension: 52: ** on_level_deinit: Editor
+2026-09-18T11:59:21.809643Z  INFO backstitch_rust_core::interop::extension: 70: ** on_level_deinit: Scene
+2026-09-18T12:08:33.643870Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_2.tscn"
+2026-09-18T12:08:33.645632Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 1 watched changes, attempting to commit...
+2026-09-18T12:08:33.649740Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 156: Did not commit anything because there's no diff.
+2026-09-18T12:08:33.668953Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_2.tscn~RF147db619.TMP"
+2026-09-18T12:08:33.669073Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes"
+2026-09-18T12:08:33.675074Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 1 watched changes, attempting to commit...
+2026-09-18T12:08:33.677072Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 156: Did not commit anything because there's no diff.
+2026-09-18T12:08:33.821100Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scripts\\player.gd"
+2026-09-18T12:08:33.821263Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scripts\\player.gd"
+2026-09-18T12:08:33.821408Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scripts\\player.gd"
+2026-09-18T12:08:33.821560Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scripts"
+2026-09-18T12:08:33.821960Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 3 watched changes, attempting to commit...
+2026-09-18T12:08:33.824673Z DEBUG backstitch_rust_core::project::fs::sync_fs_to_automerge: 161: Current changes: {"C:/Users/dnlbi/Downloads/Briwats_first/scripts\\player.gd": Modified}
+2026-09-18T12:08:33.824944Z  INFO commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 150: Attempting to commit 1 changes...
+2026-09-18T12:08:33.826284Z DEBUG commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 269: Attempting reconcile...
+2026-09-18T12:08:33.826315Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 283: Reconcile starting...
+2026-09-18T12:08:33.828363Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 319: Reconcile completed.
+2026-09-18T12:08:33.828421Z  INFO commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 275: Committed 1 files.
+2026-09-18T12:08:33.828455Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 173: Successfully made a commit! HistoryRef { branch: 2wKZnkmt9Qn5pxaqNfCBNivT2rrA, heads: [ChangeHash("5361b182646bb882ea608e803abc98a45daa3818105d6920407840c290b0bc2f")] }
+2026-09-18T12:08:33.829459Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 202: Updating branch sync state...
+2026-09-18T12:08:33.829748Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 278: Could not reconcile because we're already up-to-date.
+2026-09-18T12:08:34.011698Z  INFO backstitch_rust_core::project::project_base: 91: Ingesting changes...
+2026-09-18T12:08:36.098716Z  INFO backstitch_rust_core::helpers::tracing: 98: Tracing subscriber initialized
+2026-09-18T12:08:36.098745Z  INFO backstitch_rust_core::interop::extension: 29: ** on_level_init: Scene
+2026-09-18T12:08:36.104518Z  INFO backstitch_rust_core::interop::extension: 46: ** on_level_init: Editor
+2026-09-18T12:09:12.458831Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_2.tscn"
+2026-09-18T12:09:12.458971Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_2.tscn"
+2026-09-18T12:09:12.459091Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_2.tscn"
+2026-09-18T12:09:12.459212Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes"
+2026-09-18T12:09:12.459548Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scripts\\player.gd"
+2026-09-18T12:09:12.459682Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scripts\\player.gd"
+2026-09-18T12:09:12.459797Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scripts\\player.gd"
+2026-09-18T12:09:12.459914Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scripts"
+2026-09-18T12:09:12.461973Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 6 watched changes, attempting to commit...
+2026-09-18T12:09:12.464803Z DEBUG backstitch_rust_core::project::fs::sync_fs_to_automerge: 161: Current changes: {"C:/Users/dnlbi/Downloads/Briwats_first/scripts\\player.gd": Modified}
+2026-09-18T12:09:12.465056Z  INFO commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 150: Attempting to commit 1 changes...
+2026-09-18T12:09:12.467189Z DEBUG commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 269: Attempting reconcile...
+2026-09-18T12:09:12.467251Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 283: Reconcile starting...
+2026-09-18T12:09:12.469201Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 319: Reconcile completed.
+2026-09-18T12:09:12.469267Z  INFO commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 275: Committed 1 files.
+2026-09-18T12:09:12.469294Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 173: Successfully made a commit! HistoryRef { branch: 2wKZnkmt9Qn5pxaqNfCBNivT2rrA, heads: [ChangeHash("a08db302595627648d36c411a91fc9d81c9b0bd1b8ae80d4fcccdc905ed9299a")] }
+2026-09-18T12:09:12.470911Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 202: Updating branch sync state...
+2026-09-18T12:09:12.472234Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 278: Could not reconcile because we're already up-to-date.
+2026-09-18T12:09:12.577582Z  INFO backstitch_rust_core::project::project_base: 91: Ingesting changes...
+2026-09-18T12:09:14.244658Z  INFO backstitch_rust_core::interop::extension: 52: ** on_level_deinit: Editor
+2026-09-18T12:09:14.244807Z  INFO backstitch_rust_core::interop::extension: 70: ** on_level_deinit: Scene
+2026-09-18T12:09:17.220605Z  INFO backstitch_rust_core::helpers::tracing: 98: Tracing subscriber initialized
+2026-09-18T12:09:17.220624Z  INFO backstitch_rust_core::interop::extension: 29: ** on_level_init: Scene
+2026-09-18T12:09:17.224609Z  INFO backstitch_rust_core::interop::extension: 46: ** on_level_init: Editor
+2026-09-18T12:09:48.619083Z  INFO backstitch_rust_core::interop::extension: 52: ** on_level_deinit: Editor
+2026-09-18T12:09:48.619219Z  INFO backstitch_rust_core::interop::extension: 70: ** on_level_deinit: Scene
+2026-09-18T12:09:51.549606Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_2.tscn"
+2026-09-18T12:09:51.549728Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_2.tscn~RF147ee65c.TMP"
+2026-09-18T12:09:51.549803Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes"
+2026-09-18T12:09:51.550425Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 2 watched changes, attempting to commit...
+2026-09-18T12:09:51.554049Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 156: Did not commit anything because there's no diff.
+2026-09-18T12:13:20.193905Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_2.tscn"
+2026-09-18T12:13:20.194037Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_2.tscn"
+2026-09-18T12:13:20.194154Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_2.tscn"
+2026-09-18T12:13:20.194277Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes"
+2026-09-18T12:13:20.198832Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 3 watched changes, attempting to commit...
+2026-09-18T12:13:20.201517Z DEBUG backstitch_rust_core::project::fs::sync_fs_to_automerge: 161: Current changes: {"C:/Users/dnlbi/Downloads/Briwats_first/scripts\\player.gd": Modified}
+2026-09-18T12:13:20.201748Z  INFO commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 150: Attempting to commit 1 changes...
+2026-09-18T12:13:20.202671Z DEBUG commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 269: Attempting reconcile...
+2026-09-18T12:13:20.202705Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 283: Reconcile starting...
+2026-09-18T12:13:20.204672Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 319: Reconcile completed.
+2026-09-18T12:13:20.204717Z  INFO commit_fs_changes: backstitch_rust_core::project::branch_db::commit: 275: Committed 1 files.
+2026-09-18T12:13:20.204748Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 173: Successfully made a commit! HistoryRef { branch: 2wKZnkmt9Qn5pxaqNfCBNivT2rrA, heads: [ChangeHash("4fcb7ec1dcd3d8dd3aaf3c73a77c84aa75560f808bd75491da9f2059ebc5d138")] }
+2026-09-18T12:13:20.205784Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 202: Updating branch sync state...
+2026-09-18T12:13:20.206921Z DEBUG backstitch_rust_core::project::branch_db::branch_sync: 278: Could not reconcile because we're already up-to-date.
+2026-09-18T12:13:20.219672Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scripts\\player.gd"
+2026-09-18T12:13:20.219841Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scripts\\player.gd~RF1482157c.TMP"
+2026-09-18T12:13:20.219945Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scripts"
+2026-09-18T12:13:20.226361Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 2 watched changes, attempting to commit...
+2026-09-18T12:13:20.229907Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 156: Did not commit anything because there's no diff.
+2026-09-18T12:13:20.319742Z  INFO backstitch_rust_core::project::project_base: 91: Ingesting changes...
+2026-09-18T12:13:22.259056Z  INFO backstitch_rust_core::helpers::tracing: 98: Tracing subscriber initialized
+2026-09-18T12:13:22.259075Z  INFO backstitch_rust_core::interop::extension: 29: ** on_level_init: Scene
+2026-09-18T12:13:22.263657Z  INFO backstitch_rust_core::interop::extension: 46: ** on_level_init: Editor
+2026-09-18T12:18:24.826542Z  INFO backstitch_rust_core::interop::extension: 52: ** on_level_deinit: Editor
+2026-09-18T12:18:24.826814Z  INFO backstitch_rust_core::interop::extension: 70: ** on_level_deinit: Scene
+2026-09-18T12:18:27.347410Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_2.tscn"
+2026-09-18T12:18:27.347554Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\level_2.tscn~RF1486c531.TMP"
+2026-09-18T12:18:27.347659Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes"
+2026-09-18T12:18:27.349131Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 2 watched changes, attempting to commit...
+2026-09-18T12:18:27.351768Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 156: Did not commit anything because there's no diff.
+2026-09-18T12:18:31.420836Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\player.tscn"
+2026-09-18T12:18:31.420959Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes\\player.tscn~RF1486d52e.TMP"
+2026-09-18T12:18:31.421055Z DEBUG backstitch_rust_core::project::fs::fs_watcher: 34: handling filesystem event: "C:/Users/dnlbi/Downloads/Briwats_first/scenes"
+2026-09-18T12:18:31.426588Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 112: There are 2 watched changes, attempting to commit...
+2026-09-18T12:18:31.430087Z  INFO backstitch_rust_core::project::fs::sync_fs_to_automerge: 156: Did not commit anything because there's no diff.

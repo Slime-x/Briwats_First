@@ -95,7 +95,8 @@ func _physics_process(delta: float) -> void:
 			var data = collider.get_cell_tile_data(coords)
 			if data and data.get_custom_data("is_spike"):
 				die()
-			
+			if data and data.get_custom_data("is_trampoline"):
+				velocity.y = -1000
 
 
 #Comment this whole program. 88-92 all. 
