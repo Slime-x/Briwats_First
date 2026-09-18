@@ -110,6 +110,7 @@ texture_region_size = Vector2i(18, 18)
 7:3/0 = 0
 8:3/0 = 0
 8:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.153318, 0.46147966, -0.29366875, 4.321129, 3.9016013, 0.1258583, 9, 9, -9, 9)
+8:3/0/custom_data_0 = true
 9:3/0 = 0
 10:3/0 = 0
 11:3/0 = 0
@@ -242,6 +243,8 @@ texture_region_size = Vector2i(18, 18)
 [sub_resource type="TileSet" id="TileSet_mwfs3"]
 tile_size = Vector2i(18, 18)
 physics_layer_0/collision_layer = 3
+custom_data_layer_0/name = "is_spike"
+custom_data_layer_0/type = 1
 sources/0 = SubResource("TileSetAtlasSource_lbhrr")
 
 [node name="Game" type="Node2D" unique_id=975596420]

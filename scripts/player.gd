@@ -6,6 +6,8 @@ const JUMP_VELOCITY = -400.0
 @export var start_position = Vector2(20,20)
 var hooked = false
 var hook_position = Vector2.ZERO
+var hook_object: Node2D = null
+var hooked_local_position = Vector2.ZERO
 var rope_length = 0.0
 
 func _physics_process(delta: float) -> void:
@@ -108,7 +110,9 @@ func shoot_hook():
 	$hook.force_raycast_update()
 	if $hook.is_colliding():
 		hooked = true
-		hook_position = $hook.get_collision_point()
+		hook_object = $hook.get_collider()
+		hooked_local_position = hook_object.to_local($hook.get_collision_point())
+		hook_position = hook_object.to_global(hooked_local_position)
 		rope_length = global_position.distance_to(hook_position)
 		
 func release_hook():

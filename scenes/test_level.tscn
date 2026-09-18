@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://blpw0l31fypo7" path="res://scenes/map.tscn" id="1_gojnm"]
 [ext_resource type="PackedScene" uid="uid://jydusco7j6c5" path="res://scenes/player.tscn" id="2_1c2mv"]
 [ext_resource type="Texture2D" uid="uid://c67r0aikn1x3j" path="res://assets/tilemap_packed.png" id="3_f7g2b"]
-[ext_resource type="Texture2D" uid="uid://c01oletddmc80" path="res://icon.svg" id="4_x4b8f"]
+[ext_resource type="PackedScene" uid="uid://c3756rs3i4p1y" path="res://scenes/platform.tscn" id="5_tmr53"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ptq8"]
 texture = ExtResource("3_f7g2b")
@@ -236,14 +236,60 @@ physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_4ptq8")
 
+[sub_resource type="Gradient" id="Gradient_x4b8f"]
+offsets = PackedFloat32Array(0, 0.6, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.5, 0.5, 0.5, 1, 1, 1, 1, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tmr53"]
+gradient = SubResource("Gradient_x4b8f")
+
+[sub_resource type="Animation" id="Animation_qcd3b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-93, -127.99999)]
+}
+
+[sub_resource type="Animation" id="Animation_88ety"]
+resource_name = "moving"
+length = 5.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-93, -127.99999), Vector2(643.99994, -127.99999)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ahbqi"]
+_data = {
+&"RESET": SubResource("Animation_qcd3b"),
+&"moving": SubResource("Animation_88ety")
+}
+
 [node name="Node2D" type="Node2D" unique_id=1745000329]
 
 [node name="map" parent="." unique_id=1940241841 instance=ExtResource("1_gojnm")]
-position = Vector2(36, 135)
+position = Vector2(33, 351)
 tile_map_data = PackedByteArray("AAD///3/AAACAAAAAAAAAP3/AAACAAAAAAABAP3/AAACAAAAAAACAP3/AAACAAAAAAADAP3/AAACAAAAAAAEAP3/AAACAAAAAAAFAP3/AAACAAAAAAAGAP3/AAACAAAAAAAHAP3/AAACAAAAAAAIAP3/AAACAAAAAAAJAP3/AAACAAAAAAAKAP3/AAACAAAAAAADAPz/AAAIAAMAAAAEAPz/AAAIAAMAAAAFAPz/AAAIAAMAAAAGAPz/AAAIAAMAAAAHAPz/AAAIAAMAAAA=")
 
 [node name="player" parent="." unique_id=1786901368 instance=ExtResource("2_1c2mv")]
-position = Vector2(31, -68)
+position = Vector2(40, -164)
 
 [node name="Damage" type="TileMapLayer" parent="." unique_id=595175865]
 position = Vector2(1, 0)
@@ -252,6 +298,14 @@ tile_map_data = PackedByteArray("AAD9/wYAAAAIAAMAAAD+/wYAAAAIAAMAAAD//wYAAAAIAAM
 tile_set = SubResource("TileSet_sb12i")
 
 [node name="Line2D" type="Line2D" parent="." unique_id=1585237150]
-points = PackedVector2Array(161, -97, 501, -100, 331, -87, 330, -76, 331, -70, 332, -53, 332, -31, 360, -52, 433, -85, 448, -58, 414, -24, 358, 3, 289, -12, 268, -36, 306, -58, 280, -75, 225, -68, 204, -48, 230, -38, 158, -34, 128, -46, 138, -25, 183, -30, 220, -26, 229, -24, 240, -15, 269, -5, 290, -4, 321, 4, 350, 11, 374, 11, 408, 12, 492, -58, 557, -62, 552, -7, 512, 43, 434, 82, 381, 80, 258, 75, 180, 77)
-texture = ExtResource("4_x4b8f")
+position = Vector2(-134, 78)
+points = PackedVector2Array(660, -83, 687, -196, 529, -137, 433, -85, 448, -58, 414, -24, 268, -36, 408, 12, 552, -7, 258, 75, 180, 77)
+texture = SubResource("GradientTexture2D_tmr53")
 texture_mode = 2
+
+[node name="platform" parent="." unique_id=927093626 instance=ExtResource("5_tmr53")]
+position = Vector2(-93, -127.99999)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="platform" unique_id=531392292]
+libraries/ = SubResource("AnimationLibrary_ahbqi")
+autoplay = &"moving"
