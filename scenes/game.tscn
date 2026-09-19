@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c67r0aikn1x3j" path="res://assets/tilemap_packed.png" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bh5l7c4nuwte0" path="res://scenes/next_level.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://blpw0l31fypo7" path="res://scenes/map.tscn" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://r6jhdmk6u67p" path="res://scenes/portal.tscn" id="6_p57ef"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
 texture = ExtResource("3_lnu2h")
@@ -293,3 +294,11 @@ position = Vector2(2610, 13)
 
 [node name="map" parent="." unique_id=1940241841 instance=ExtResource("5_iywne")]
 tile_map_data = PackedByteArray("AAA9AAoAAAAIAAUAAAA5AAoAAAAIAAMAAAA4AAoAAAAIAAMAAAA3AAoAAAAIAAMAAAA2AAoAAAAIAAMAAAA1AAoAAAAIAAMAAAA0AAoAAAAIAAMAAAA=")
+
+[node name="portal" parent="." unique_id=1768820293 node_paths=PackedStringArray("destination") instance=ExtResource("6_p57ef")]
+position = Vector2(777, 17)
+destination = NodePath("../portal2")
+
+[node name="portal2" parent="." unique_id=1649705900 node_paths=PackedStringArray("destination") instance=ExtResource("6_p57ef")]
+position = Vector2(1788, 345)
+destination = NodePath("../portal")
