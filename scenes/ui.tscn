@@ -66,16 +66,9 @@ expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
-[node name="UI" type="Control" unique_id=1240317431]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="UI" type="CanvasLayer" unique_id=1516788300]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=116862420]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -90,8 +83,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.24313726)
 
 [node name="startscreen" type="Control" parent="." unique_id=1202058071]
-visible = false
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_right = 1158.0
 offset_bottom = 654.0
@@ -131,8 +123,9 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_x4jx1")
 theme_override_styles/hover = SubResource("StyleBoxFlat_nt7q6")
 text = "  PLAY  "
 
-[node name="Control" type="Control" parent="." unique_id=1049258014]
-layout_mode = 1
+[node name="choose_level" type="Control" parent="." unique_id=1049258014]
+visible = false
+layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -145,7 +138,19 @@ offset_bottom = 322.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="level_1" type="Button" parent="Control" unique_id=1691395913]
+[node name="Label" type="Label" parent="choose_level" unique_id=243433051]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 227.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 128
+text = "Levels:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="level_1" type="Button" parent="choose_level" unique_id=1691395913]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -153,9 +158,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -507.5
-offset_top = -96.0
+offset_top = -4.0
 offset_right = -435.5
-offset_bottom = -24.0
+offset_bottom = 68.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_nt7q6")
@@ -164,3 +169,307 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_yev5y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_wm3ai")
 theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
 text = " 1 "
+
+[node name="level_2" type="Button" parent="choose_level" unique_id=957127560]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -357.5
+offset_top = -4.0
+offset_right = -285.5
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_yev5y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wm3ai")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
+text = " 2 "
+
+[node name="level_3" type="Button" parent="choose_level" unique_id=1107491446]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -207.5
+offset_top = -4.0
+offset_right = -135.5
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_yev5y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wm3ai")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
+text = " 3 "
+
+[node name="level_4" type="Button" parent="choose_level" unique_id=1288114041]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.5
+offset_top = -4.0
+offset_right = 14.5
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_yev5y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wm3ai")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
+text = " 4 "
+
+[node name="level_5" type="Button" parent="choose_level" unique_id=1584975349]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 92.5
+offset_top = -4.0
+offset_right = 164.5
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_yev5y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wm3ai")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
+text = " 5 "
+
+[node name="level_6" type="Button" parent="choose_level" unique_id=832809054]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 242.5
+offset_top = -4.0
+offset_right = 314.5
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_yev5y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wm3ai")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
+text = " 6 "
+
+[node name="level_7" type="Button" parent="choose_level" unique_id=115507412]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 392.5
+offset_top = -4.0
+offset_right = 464.5
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_yev5y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wm3ai")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
+text = " 7 "
+
+[node name="level_8" type="Button" parent="choose_level" unique_id=1226417962]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -507.5
+offset_top = 146.0
+offset_right = -435.5
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_yev5y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wm3ai")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
+text = " 8 "
+
+[node name="level_9" type="Button" parent="choose_level" unique_id=67383904]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -357.5
+offset_top = 146.0
+offset_right = -285.5
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_yev5y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wm3ai")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
+text = " 9 "
+
+[node name="level_10" type="Button" parent="choose_level" unique_id=1445839616]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -207.5
+offset_top = 146.0
+offset_right = -135.5
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_yev5y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wm3ai")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
+text = "10"
+
+[node name="level_11" type="Button" parent="choose_level" unique_id=1338207007]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.5
+offset_top = 146.0
+offset_right = 14.5
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_yev5y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wm3ai")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
+text = "11"
+
+[node name="level_12" type="Button" parent="choose_level" unique_id=312621262]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 92.5
+offset_top = 146.0
+offset_right = 164.5
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_yev5y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wm3ai")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
+text = "12"
+
+[node name="level_13" type="Button" parent="choose_level" unique_id=1053494230]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 242.5
+offset_top = 146.0
+offset_right = 314.5
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_yev5y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wm3ai")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
+text = "13"
+
+[node name="level_14" type="Button" parent="choose_level" unique_id=148120715]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 392.5
+offset_top = 146.0
+offset_right = 464.5
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_yev5y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wm3ai")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
+text = "14"
+
+[node name="died" type="Control" parent="." unique_id=594423591]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -577.5
+offset_top = -325.5
+offset_right = 577.5
+offset_bottom = 325.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="died" unique_id=2016895258]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.5
+offset_top = -325.0
+offset_right = 581.5
+offset_bottom = 331.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.24313726)
+
+[node name="Label" type="Label" parent="died" unique_id=2048978486]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 653.5
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.65, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 64
+text = "You Died!!"
+horizontal_alignment = 1
+vertical_alignment = 1
