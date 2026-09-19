@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://blpw0l31fypo7" path="res://scenes/map.tscn" id="1_gojnm"]
 [ext_resource type="PackedScene" uid="uid://jydusco7j6c5" path="res://scenes/player.tscn" id="2_1c2mv"]
 [ext_resource type="Texture2D" uid="uid://c67r0aikn1x3j" path="res://assets/tilemap_packed.png" id="3_f7g2b"]
+[ext_resource type="PackedScene" uid="uid://cppcdts13ubxd" path="res://scenes/key.tscn" id="5_qcd3b"]
 [ext_resource type="PackedScene" uid="uid://c3756rs3i4p1y" path="res://scenes/platform.tscn" id="5_tmr53"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ptq8"]
@@ -285,8 +286,8 @@ _data = {
 [node name="Node2D" type="Node2D" unique_id=1745000329]
 
 [node name="map" parent="." unique_id=1940241841 instance=ExtResource("1_gojnm")]
-position = Vector2(33, 351)
-tile_map_data = PackedByteArray("AAD///3/AAACAAAAAAAAAP3/AAACAAAAAAABAP3/AAACAAAAAAACAP3/AAACAAAAAAADAP3/AAACAAAAAAAEAP3/AAACAAAAAAAFAP3/AAACAAAAAAAGAP3/AAACAAAAAAAHAP3/AAACAAAAAAAIAP3/AAACAAAAAAAJAP3/AAACAAAAAAAKAP3/AAACAAAAAAADAPz/AAAIAAMAAAAEAPz/AAAIAAMAAAAFAPz/AAAIAAMAAAAGAPz/AAAIAAMAAAAHAPz/AAAIAAMAAAA=")
+position = Vector2(36, 356)
+tile_map_data = PackedByteArray("AAD///3/AAACAAAAAAAAAP3/AAACAAAAAAABAP3/AAACAAAAAAACAP3/AAACAAAAAAADAP3/AAACAAAAAAAEAP3/AAACAAAAAAAFAP3/AAACAAAAAAAGAP3/AAACAAAAAAAHAP3/AAACAAAAAAAIAP3/AAACAAAAAAAJAP3/AAACAAAAAAAKAP3/AAACAAAAAAADAPz/AAAIAAMAAAAEAPz/AAAIAAMAAAAFAPz/AAAIAAMAAAAGAPz/AAAIAAMAAAAHAPz/AAAIAAMAAAD///X/AAABAAAAAAAAAPX/AAACAAAAAAABAPX/AAADAAAAAAACAPX/AAABAAAAAAADAPX/AAACAAAAAAAEAPX/AAADAAAAAAD8//X/AAABAAAAAAD9//X/AAACAAAAAAD+//X/AAADAAAAAAA=")
 
 [node name="player" parent="." unique_id=1786901368 instance=ExtResource("2_1c2mv")]
 position = Vector2(40, -164)
@@ -309,3 +310,10 @@ position = Vector2(-93, -127.99999)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="platform" unique_id=531392292]
 libraries/ = SubResource("AnimationLibrary_ahbqi")
 autoplay = &"moving"
+
+[node name="Area2D" parent="." unique_id=346756486 instance=ExtResource("5_qcd3b")]
+position = Vector2(-98, -155)
+
+[node name="map2" parent="Area2D" unique_id=359068169 instance=ExtResource("1_gojnm")]
+position = Vector2(98, 155)
+tile_map_data = PackedByteArray("AAAFAP7/AAAIAAEAAAA=")
