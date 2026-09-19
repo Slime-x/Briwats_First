@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://cwthr66lgkqce"]
 
 [ext_resource type="FontFile" uid="uid://d3s6lreon8g40" path="res://assets/PixelOperator-Bold.ttf" id="1_nt7q6"]
+[ext_resource type="Script" uid="uid://dyf55f0equpk" path="res://scripts/ui.gd" id="1_x4jx1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtct1"]
-bg_color = Color(1, 0.32999998, 0.36350012, 0.23921569)
+bg_color = Color(1, 0.32941177, 0.3647059, 0.5254902)
 border_color = Color(1, 0.86238265, 0.46946627, 1)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
@@ -67,6 +68,7 @@ expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
 [node name="UI" type="CanvasLayer" unique_id=1516788300]
+script = ExtResource("1_x4jx1")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=116862420]
 anchors_preset = 8
@@ -88,12 +90,27 @@ anchors_preset = 0
 offset_right = 1158.0
 offset_bottom = 654.0
 
+[node name="ColorRect2" type="ColorRect" parent="startscreen" unique_id=6676458]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -578.5
+offset_top = -328.0
+offset_right = 578.5
+offset_bottom = 328.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.56078434)
+
 [node name="Label" type="Label" parent="startscreen" unique_id=644463732]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 offset_right = -4.0
-offset_bottom = 259.0
+offset_bottom = 336.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 128
@@ -110,9 +127,9 @@ anchor_top = 0.60400003
 anchor_right = 0.5
 anchor_bottom = 0.60400003
 offset_left = -96.0
-offset_top = -37.01602
+offset_top = 47.98398
 offset_right = 106.0
-offset_bottom = 36.98398
+offset_bottom = 121.98398
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(1, 0.86238265, 0.46946627, 1)
@@ -138,6 +155,21 @@ offset_bottom = 322.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="ColorRect2" type="ColorRect" parent="choose_level" unique_id=443395170]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -577.0
+offset_top = -324.0
+offset_right = 580.0
+offset_bottom = 332.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7882353)
+
 [node name="Label" type="Label" parent="choose_level" unique_id=243433051]
 layout_mode = 1
 anchors_preset = 10
@@ -151,6 +183,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="level_1" type="Button" parent="choose_level" unique_id=1691395913]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -171,6 +204,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
 text = " 1 "
 
 [node name="level_2" type="Button" parent="choose_level" unique_id=957127560]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -191,6 +225,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
 text = " 2 "
 
 [node name="level_3" type="Button" parent="choose_level" unique_id=1107491446]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -211,6 +246,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
 text = " 3 "
 
 [node name="level_4" type="Button" parent="choose_level" unique_id=1288114041]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -231,6 +267,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
 text = " 4 "
 
 [node name="level_5" type="Button" parent="choose_level" unique_id=1584975349]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -251,6 +288,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
 text = " 5 "
 
 [node name="level_6" type="Button" parent="choose_level" unique_id=832809054]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -271,6 +309,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
 text = " 6 "
 
 [node name="level_7" type="Button" parent="choose_level" unique_id=115507412]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -291,6 +330,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
 text = " 7 "
 
 [node name="level_8" type="Button" parent="choose_level" unique_id=1226417962]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -311,6 +351,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
 text = " 8 "
 
 [node name="level_9" type="Button" parent="choose_level" unique_id=67383904]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -331,6 +372,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
 text = " 9 "
 
 [node name="level_10" type="Button" parent="choose_level" unique_id=1445839616]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -351,6 +393,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
 text = "10"
 
 [node name="level_11" type="Button" parent="choose_level" unique_id=1338207007]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -371,6 +414,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
 text = "11"
 
 [node name="level_12" type="Button" parent="choose_level" unique_id=312621262]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -391,6 +435,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
 text = "12"
 
 [node name="level_13" type="Button" parent="choose_level" unique_id=1053494230]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -411,6 +456,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
 text = "13"
 
 [node name="level_14" type="Button" parent="choose_level" unique_id=148120715]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -473,3 +519,5 @@ theme_override_font_sizes/font_size = 64
 text = "You Died!!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="startscreen/Button" to="." method="_on_button_pressed"]
