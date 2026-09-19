@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cwthr66lgkqce"]
+
+[ext_resource type="FontFile" uid="uid://d3s6lreon8g40" path="res://assets/PixelOperator-Bold.ttf" id="1_nt7q6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtct1"]
+bg_color = Color(1, 0.32999998, 0.36350012, 0.23921569)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0.86238265, 0.46946627, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nt7q6"]
+bg_color = Color(1, 0.32999998, 0.36350012, 0.36862746)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="UI" type="Control" unique_id=1240317431]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=116862420]
+layout_mode = 0
+offset_right = 1157.0
+offset_bottom = 656.0
+color = Color(0, 0, 0, 0.24313726)
+
+[node name="Label" type="Label" parent="." unique_id=644463732]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 128.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 128
+text = "
+HOOKUP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=855619824]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.86238265, 0.46946627, 1)
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_qtct1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nt7q6")
+text = "  PLAY  "
