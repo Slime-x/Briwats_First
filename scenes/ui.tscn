@@ -4,6 +4,14 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtct1"]
 bg_color = Color(1, 0.32999998, 0.36350012, 0.23921569)
+border_color = Color(1, 0.86238265, 0.46946627, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4jx1"]
+bg_color = Color(1, 0.33117732, 0.3656431, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
@@ -16,10 +24,47 @@ corner_radius_bottom_left = 25
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nt7q6"]
 bg_color = Color(1, 0.32999998, 0.36350012, 0.36862746)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0.86238265, 0.46946627, 1)
 corner_radius_top_left = 25
 corner_radius_top_right = 25
 corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yev5y"]
+bg_color = Color(1, 0.7666667, 0, 0.6627451)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wm3ai"]
+bg_color = Color(1, 0.7666667, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gdt2y"]
+bg_color = Color(1, 0.7666667, 0, 0.78039217)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
 
 [node name="UI" type="Control" unique_id=1240317431]
 layout_mode = 3
@@ -30,16 +75,33 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=116862420]
-layout_mode = 0
-offset_right = 1157.0
-offset_bottom = 656.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.5
+offset_top = -325.0
+offset_right = 581.5
+offset_bottom = 331.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 0.24313726)
 
-[node name="Label" type="Label" parent="." unique_id=644463732]
+[node name="startscreen" type="Control" parent="." unique_id=1202058071]
+visible = false
+layout_mode = 1
+anchors_preset = 0
+offset_right = 1158.0
+offset_bottom = 654.0
+
+[node name="Label" type="Label" parent="startscreen" unique_id=644463732]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 128.0
+offset_right = -4.0
+offset_bottom = 259.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 128
@@ -48,22 +110,57 @@ HOOKUP"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="." unique_id=855619824]
+[node name="Button" type="Button" parent="startscreen" unique_id=855619824]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.60400003
+anchor_right = 0.5
+anchor_bottom = 0.60400003
+offset_left = -96.0
+offset_top = -37.01602
+offset_right = 106.0
+offset_bottom = 36.98398
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 0.86238265, 0.46946627, 1)
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_qtct1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_x4jx1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nt7q6")
+text = "  PLAY  "
+
+[node name="Control" type="Control" parent="." unique_id=1049258014]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -4.0
-offset_top = -4.0
-offset_right = 4.0
-offset_bottom = 4.0
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 579.0
+offset_bottom = 322.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(1, 0.86238265, 0.46946627, 1)
+
+[node name="level_1" type="Button" parent="Control" unique_id=1691395913]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -507.5
+offset_top = -96.0
+offset_right = -435.5
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 64
-theme_override_styles/normal = SubResource("StyleBoxFlat_qtct1")
-theme_override_styles/hover = SubResource("StyleBoxFlat_nt7q6")
-text = "  PLAY  "
+theme_override_styles/normal = SubResource("StyleBoxFlat_yev5y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wm3ai")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gdt2y")
+text = " 1 "
