@@ -9,6 +9,7 @@ var hook_position = Vector2.ZERO
 var hook_object: Node2D = null
 var hooked_local_position = Vector2.ZERO
 var rope_length = 0.0
+var activating_trampolines = []
 
 func _physics_process(delta: float) -> void:
 	
@@ -88,7 +89,15 @@ func _physics_process(delta: float) -> void:
 	
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
+		
+		if collision == null:
+			continue
+		
 		var collider = collision.get_collider()
+		
+		if collider == null:
+			continue
+		
 		if collider is TileMapLayer:
 			var local = collider.to_local(collision.get_position())
 			var coords = collider.local_to_map(local)
@@ -96,7 +105,26 @@ func _physics_process(delta: float) -> void:
 			if data and data.get_custom_data("is_spike"):
 				die()
 			if data and data.get_custom_data("is_trampoline"):
-				velocity.y = -1000
+				if not coords in activating_trampolines:
+					activating_trampolines.append(coords)
+					velocity.y = -1000
+					activate_trampoline(collider, coords)
+
+func activate_trampoline(collider: TileMapLayer, coords: Vector2i):
+	var original_tile = collider.get_cell_atlas_coords(coords)
+	var source_id = collider.get_cell_source_id(coords)
+
+	# Change trampoline to pressed texture
+	collider.set_cell(coords, source_id, Vector2i(8, 5))
+
+	# Wait 0.2 seconds
+	await get_tree().create_timer(0.2).timeout
+
+	# Change trampoline back to original texture
+	collider.set_cell(coords, source_id, original_tile)
+
+	# Allow trampoline to be activated again
+	activating_trampolines.erase(coords)
 
 
 #Comment this whole program. 88-92 all. 
