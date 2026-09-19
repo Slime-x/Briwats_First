@@ -8661,3 +8661,30 @@
 2026-09-19T10:36:38.857283Z  INFO backstitch_rust_core::interop::extension: 46: ** on_level_init: Editor
 2026-09-19T10:36:54.762169Z  INFO backstitch_rust_core::interop::extension: 52: ** on_level_deinit: Editor
 2026-09-19T10:36:54.762321Z  INFO backstitch_rust_core::interop::extension: 70: ** on_level_deinit: Scene
+2026-09-19T11:44:33.884773Z  INFO backstitch_rust_core::helpers::tracing: 98: Tracing subscriber initialized
+2026-09-19T11:44:33.884804Z  INFO backstitch_rust_core::interop::extension: 29: ** on_level_init: Scene
+2026-09-19T11:44:33.891181Z  INFO backstitch_rust_core::interop::extension: 46: ** on_level_init: Editor
+2026-09-19T11:44:36.876460Z DEBUG backstitch_rust_core::interop::godot_project: 978: ** GodotProjectPlugin: enter_tree
+2026-09-19T11:44:38.942336Z  INFO backstitch_rust_core::project::project_starter: 27: Starting a project...
+2026-09-19T11:44:38.944248Z  INFO backstitch_rust_core::project::project_starter: 94: Creating with mode: AutoLoaded
+2026-09-19T11:44:38.944463Z  INFO backstitch_rust_core::project::project_starter: 119: Starting GodotProject with metadata doc id: Some(YFkB9FG7SiKvhqtRyvfuTyoRZyA)
+2026-09-19T11:44:38.944473Z DEBUG backstitch_rust_core::project::project_starter: 124: Attempting to create driver...
+2026-09-19T11:44:38.948435Z  INFO fjall::db: 817: Creating database at C:\Users\dnlbi\Downloads\Briwats_first\.backstitch\index.bin
+2026-09-19T11:44:38.948985Z ERROR fjall::journal::writer: 128: Failed to create journal file at C:\Users\dnlbi\Downloads\Briwats_first\.backstitch\index.bin\0.jnl: Os { code: 80, kind: AlreadyExists, message: "The file exists." }
+2026-09-19T11:44:38.949378Z ERROR backstitch_rust_core::project::project_starter: 62: error starting project: couldn't create index: there was an error with the Fjall database: FjallError: Io(Os { code: 80, kind: AlreadyExists, message: "The file exists." })
+2026-09-19T11:44:39.118603Z  INFO backstitch_rust_core::project::project_base: 216: START STATUS CHANGED Failed("couldn't create index: there was an error with the Fjall database: FjallError: Io(Os { code: 80, kind: AlreadyExists, message: \"The file exists.\" })")
+2026-09-19T11:44:49.484194Z  INFO backstitch_rust_core::helpers::tracing: 98: Tracing subscriber initialized
+2026-09-19T11:44:49.484218Z  INFO backstitch_rust_core::interop::extension: 29: ** on_level_init: Scene
+2026-09-19T11:44:49.488067Z  INFO backstitch_rust_core::interop::extension: 46: ** on_level_init: Editor
+2026-09-19T11:44:58.737056Z  INFO backstitch_rust_core::interop::extension: 52: ** on_level_deinit: Editor
+2026-09-19T11:44:58.737292Z  INFO backstitch_rust_core::interop::extension: 70: ** on_level_deinit: Scene
+2026-09-19T11:45:13.843446Z  INFO backstitch_rust_core::helpers::tracing: 98: Tracing subscriber initialized
+2026-09-19T11:45:13.843465Z  INFO backstitch_rust_core::interop::extension: 29: ** on_level_init: Scene
+2026-09-19T11:45:13.847328Z  INFO backstitch_rust_core::interop::extension: 46: ** on_level_init: Editor
+2026-09-19T11:46:10.311054Z  INFO backstitch_rust_core::interop::extension: 52: ** on_level_deinit: Editor
+2026-09-19T11:46:10.311178Z  INFO backstitch_rust_core::interop::extension: 70: ** on_level_deinit: Scene
+2026-09-19T11:46:40.512802Z  INFO backstitch_rust_core::helpers::tracing: 98: Tracing subscriber initialized
+2026-09-19T11:46:40.512821Z  INFO backstitch_rust_core::interop::extension: 29: ** on_level_init: Scene
+2026-09-19T11:46:40.517130Z  INFO backstitch_rust_core::interop::extension: 46: ** on_level_init: Editor
+2026-09-19T11:50:34.583917Z  INFO backstitch_rust_core::interop::extension: 52: ** on_level_deinit: Editor
+2026-09-19T11:50:34.584056Z  INFO backstitch_rust_core::interop::extension: 70: ** on_level_deinit: Scene
