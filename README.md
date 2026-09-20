@@ -10,4 +10,5 @@ You can hook to walls by clicking on them using your mouse And you can get pulle
 # AI declarations
   ### Week 1
    Daniel - I used ai to make the bounce pad animated and i asked it a few times how to do something but i dont remember what it was but it was just minor stuff and ai didnt actually do it for me.
+   
   Anass - I didn't rely on AI for code creation and only used it for debugging and as an advanced search engine to figure out how to solve certain problems in godot and gdscript
