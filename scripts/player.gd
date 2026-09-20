@@ -21,6 +21,12 @@ func _physics_process(delta: float) -> void:
 			velocity.y = JUMP_VELOCITY
 	
 	
+	if Input.is_action_pressed("menu"):
+		if Gamemanager.level_selection == true:
+			Gamemanager.level_selection = false
+		if Gamemanager.level_selection == false:
+			Gamemanager.level_selection = true
+	
 	#UNCOMMENT THIS AND COMMENT THE _input function and play the game...
 	#if Input.is_action_just_pressed("hook"):
 		#shoot_hook()

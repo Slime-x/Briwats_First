@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://jydusco7j6c5" path="res://scenes/player.tscn" id="1_jywgt"]
 [ext_resource type="PackedScene" uid="uid://blpw0l31fypo7" path="res://scenes/map.tscn" id="2_4t8k6"]
 [ext_resource type="PackedScene" uid="uid://bh5l7c4nuwte0" path="res://scenes/next_level.tscn" id="3_4t8k6"]
+[ext_resource type="PackedScene" uid="uid://cwthr66lgkqce" path="res://scenes/ui.tscn" id="4_ku6r7"]
 
 [node name="Node2D" type="Node2D" unique_id=1827289738]
 
@@ -14,3 +15,5 @@ tile_map_data = PackedByteArray("AAAAAAEAAAACAAAAAAABAAEAAAACAAAAAAACAAEAAAACAAA
 
 [node name="Next_level" parent="." unique_id=2129035761 instance=ExtResource("3_4t8k6")]
 position = Vector2(-1852, 121)
+
+[node name="UI" parent="." unique_id=1516788300 instance=ExtResource("4_ku6r7")]

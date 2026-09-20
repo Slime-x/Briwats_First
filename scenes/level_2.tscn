@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://jydusco7j6c5" path="res://scenes/player.tscn" id="2_pbc48"]
 [ext_resource type="PackedScene" uid="uid://bh5l7c4nuwte0" path="res://scenes/next_level.tscn" id="3_pbc48"]
 [ext_resource type="PackedScene" uid="uid://duqr4vxxxovdu" path="res://scenes/map_hookonly.tscn" id="4_eqxsl"]
+[ext_resource type="PackedScene" uid="uid://cwthr66lgkqce" path="res://scenes/ui.tscn" id="5_b4j7a"]
 
 [node name="level_2" type="Node2D" unique_id=292673858]
 
@@ -18,3 +19,5 @@ position = Vector2(5093, -204)
 
 [node name="map_hookonly" parent="." unique_id=154707065 instance=ExtResource("4_eqxsl")]
 tile_map_data = PackedByteArray("AAAMAPr/AAAJAAAAAAANAPr/AAAJAAAAAAAaAPr/AAAJAAAAAAAbAPr/AAAJAAAAAAAnAPr/AAAJAAAAAAAoAPr/AAAJAAAAAAA8APz/AAAJAAAAAAA9APz/AAAJAAAAAABPAPz/AAAJAAAAAABQAPz/AAAJAAAAAAA=")
+
+[node name="UI" parent="." unique_id=1516788300 instance=ExtResource("5_b4j7a")]
