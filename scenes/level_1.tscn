@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://d3s6lreon8g40" path="res://assets/PixelOperator-Bold.ttf" id="3_rus8k"]
 [ext_resource type="PackedScene" uid="uid://bh5l7c4nuwte0" path="res://scenes/next_level.tscn" id="4_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://duqr4vxxxovdu" path="res://scenes/map_hookonly.tscn" id="5_4nkto"]
+[ext_resource type="PackedScene" uid="uid://cwthr66lgkqce" path="res://scenes/ui.tscn" id="6_fcfvj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xbjy"]
 texture = ExtResource("1_bswci")
@@ -316,3 +317,5 @@ position = Vector2(2358, -239)
 
 [node name="map_hookonly" parent="." unique_id=154707065 instance=ExtResource("5_4nkto")]
 tile_map_data = PackedByteArray("AAAOAPf/AAAJAAAAAAAYAPf/AAAJAAAAAAAkAPf/AAAJAAAAAAAqAPf/AAAJAAAAAAArAPf/AAAJAAAAAAAsAPf/AAAJAAAAAAAxAPr/AAAJAAAAAAAyAPr/AAAJAAAAAAA=")
+
+[node name="UI" parent="." unique_id=1516788300 instance=ExtResource("6_fcfvj")]

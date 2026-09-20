@@ -1,14 +1,11 @@
 [gd_scene format=4 uid="uid://d3xlm6rx0q67d"]
 
 [ext_resource type="Texture2D" uid="uid://csts2ivlr38w7" path="res://assets/world_tileset.png" id="1_31tvc"]
+[ext_resource type="Script" uid="uid://dng0pp1qkavvm" path="res://scripts/background_screen.gd" id="1_en0dm"]
 [ext_resource type="PackedScene" uid="uid://blpw0l31fypo7" path="res://scenes/map.tscn" id="1_mpsgl"]
 [ext_resource type="PackedScene" uid="uid://cwthr66lgkqce" path="res://scenes/ui.tscn" id="2_3klyg"]
 [ext_resource type="PackedScene" uid="uid://r6jhdmk6u67p" path="res://scenes/portal.tscn" id="3_g4rv2"]
 [ext_resource type="PackedScene" uid="uid://c3756rs3i4p1y" path="res://scenes/platform.tscn" id="4_sad7v"]
-
-[sub_resource type="GDScript" id="GDScript_31tvc"]
-script/source = "extends Node2D
-"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_en0dm"]
 texture = ExtResource("1_31tvc")
@@ -182,7 +179,7 @@ _data = {
 }
 
 [node name="Background Screen" type="Node2D" unique_id=1459503254]
-script = SubResource("GDScript_31tvc")
+script = ExtResource("1_en0dm")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1031623045]
 scale = Vector2(2, 2)

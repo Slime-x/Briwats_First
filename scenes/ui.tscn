@@ -105,6 +105,21 @@ HOOKUP"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label2" type="Label" parent="startscreen" unique_id=1372975399]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 365.0
+offset_right = -4.0
+offset_bottom = 701.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 24
+text = "
+HINT: Press [Esc] while on game to change unlocked level"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Button" type="Button" parent="startscreen" unique_id=855619824]
 layout_mode = 1
 anchors_preset = -1

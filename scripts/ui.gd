@@ -4,23 +4,31 @@ extends CanvasLayer
 @onready var choose_level: Control = $choose_level
 var level_menu = false
 var level
+var not_pressed =true 
 
 func _ready():
 	for button in get_tree().get_nodes_in_group("buttons"):
 		button.focus_mode = Control.FOCUS_NONE
+	if Gamemanager.show_first_screen_:
+		startscreen.show()
 
 
 func _on_button_pressed(): #StartScreen Play button
 	Gamemanager.start_screen = false
 	Gamemanager.level_selection = true
+	Gamemanager.show_first_screen_ = false
 	startscreen.hide()
 	level_choice()
 	level_available()
 	
 func _input(_event: InputEvent) -> void:
-	if Input.is_action_pressed("menu"):
-		level_choice()
-		print("Menu open")
+	if not_pressed:
+		if Input.is_action_pressed("menu") and not Gamemanager.start_screen:
+			not_pressed = false
+			level_choice()
+			level_available()
+			await get_tree().create_timer(0.15).timeout
+			not_pressed = true
 
 
 func level_available():
