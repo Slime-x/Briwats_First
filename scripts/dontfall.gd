@@ -15,7 +15,7 @@ func reset_ragdoll():
 	
 	for child in get_children():
 		if child is RigidBody2D:
-			# Zeroing velocities :3
+			# Killing physics :3
 			child.global_position += offset
 			child.linear_velocity = Vector2.ZERO
 			child.angular_velocity = 0.0
