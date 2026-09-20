@@ -67,32 +67,10 @@ expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6tdsv"]
-bg_color = Color(0.63, 0.49349996, 0, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_votpg"]
-bg_color = Color(0.86, 0.67366666, 0, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ml0ti"]
-bg_color = Color(0.735908, 0.5780467, 0, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
 [node name="UI" type="CanvasLayer" unique_id=1516788300]
 script = ExtResource("1_x4jx1")
 
 [node name="startscreen" type="Control" parent="." unique_id=1202058071]
-visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1158.0
@@ -124,6 +102,21 @@ theme_override_fonts/font = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 128
 text = "
 HOOKUP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="startscreen" unique_id=1372975399]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 365.0
+offset_right = -4.0
+offset_bottom = 701.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_nt7q6")
+theme_override_font_sizes/font_size = 24
+text = "
+HINT: Press [Esc] while on game to change unlocked level"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -528,24 +521,18 @@ text = "You Died!!"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="onscreen" type="Control" parent="." unique_id=1660020343]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="seelevel" type="Button" parent="onscreen" unique_id=223645534]
-layout_mode = 0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = 95.0
-offset_bottom = 45.0
-theme_override_fonts/font = ExtResource("1_nt7q6")
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_6tdsv")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_votpg")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ml0ti")
-text = " LEVEL "
-
 [connection signal="pressed" from="startscreen/Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="onscreen/seelevel" to="." method="_on_chooselevel_pressed"]
+[connection signal="pressed" from="choose_level/level_1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="choose_level/level_2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="choose_level/level_3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="choose_level/level_4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="choose_level/level_5" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="choose_level/level_6" to="." method="_on_level_6_pressed"]
+[connection signal="pressed" from="choose_level/level_7" to="." method="_on_level_7_pressed"]
+[connection signal="pressed" from="choose_level/level_8" to="." method="_on_level_8_pressed"]
+[connection signal="pressed" from="choose_level/level_9" to="." method="_on_level_9_pressed"]
+[connection signal="pressed" from="choose_level/level_10" to="." method="_on_level_10_pressed"]
+[connection signal="pressed" from="choose_level/level_11" to="." method="_on_level_11_pressed"]
+[connection signal="pressed" from="choose_level/level_12" to="." method="_on_level_12_pressed"]
+[connection signal="pressed" from="choose_level/level_13" to="." method="_on_level_13_pressed"]
+[connection signal="pressed" from="choose_level/level_14" to="." method="_on_level_14_pressed"]

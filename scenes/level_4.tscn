@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://jydusco7j6c5" path="res://scenes/player.tscn" id="2_6j14n"]
 [ext_resource type="PackedScene" uid="uid://bh5l7c4nuwte0" path="res://scenes/next_level.tscn" id="3_6j14n"]
 [ext_resource type="PackedScene" uid="uid://blpw0l31fypo7" path="res://scenes/map.tscn" id="4_rbbjd"]
+[ext_resource type="PackedScene" uid="uid://cwthr66lgkqce" path="res://scenes/ui.tscn" id="4_wom6i"]
 
 [node name="level_4" type="Node2D" unique_id=712970452]
 position = Vector2(1, -23)
@@ -15,3 +16,5 @@ position = Vector2(15, -108)
 
 [node name="Next_level" parent="." unique_id=2129035761 instance=ExtResource("3_6j14n")]
 position = Vector2(544, 769)
+
+[node name="UI" parent="." unique_id=1516788300 instance=ExtResource("4_wom6i")]
