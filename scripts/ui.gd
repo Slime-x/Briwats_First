@@ -5,6 +5,7 @@ extends CanvasLayer
 var level_menu = false
 var level
 var not_pressed =true 
+var current_lvl = 1
 
 func _ready():
 	for button in get_tree().get_nodes_in_group("buttons"):
@@ -23,7 +24,7 @@ func _on_button_pressed(): #StartScreen Play button
 	
 func _input(_event: InputEvent) -> void:
 	if not_pressed:
-		if Input.is_action_pressed("menu") and not Gamemanager.start_screen:
+		if Input.is_action_pressed("ui_menu") and not Gamemanager.start_screen:
 			not_pressed = false
 			level_choice()
 			level_available()

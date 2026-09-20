@@ -72,9 +72,11 @@ script = ExtResource("1_x4jx1")
 
 [node name="startscreen" type="Control" parent="." unique_id=1202058071]
 layout_mode = 3
-anchors_preset = 0
+anchor_top = 0.20400001
+anchor_bottom = 0.20400001
+offset_top = -132.192
 offset_right = 1158.0
-offset_bottom = 654.0
+offset_bottom = 521.808
 
 [node name="ColorRect2" type="ColorRect" parent="startscreen" unique_id=6676458]
 layout_mode = 1
@@ -115,8 +117,7 @@ offset_bottom = 701.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_nt7q6")
 theme_override_font_sizes/font_size = 24
-text = "
-HINT: Press [Esc] while on game to change unlocked level"
+text = "TIP: When swinging press \"R\" for extra momentum"
 horizontal_alignment = 1
 vertical_alignment = 1
 

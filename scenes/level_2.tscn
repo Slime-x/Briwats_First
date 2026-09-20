@@ -21,3 +21,4 @@ position = Vector2(5093, -204)
 tile_map_data = PackedByteArray("AAAMAPr/AAAJAAAAAAANAPr/AAAJAAAAAAAaAPr/AAAJAAAAAAAbAPr/AAAJAAAAAAAnAPr/AAAJAAAAAAAoAPr/AAAJAAAAAAA8APz/AAAJAAAAAAA9APz/AAAJAAAAAABPAPz/AAAJAAAAAABQAPz/AAAJAAAAAAA=")
 
 [node name="UI" parent="." unique_id=1516788300 instance=ExtResource("5_b4j7a")]
+visible = false

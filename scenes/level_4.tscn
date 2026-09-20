@@ -18,3 +18,5 @@ position = Vector2(15, -108)
 position = Vector2(544, 769)
 
 [node name="UI" parent="." unique_id=1516788300 instance=ExtResource("4_wom6i")]
+layer = 2
+visible = false
