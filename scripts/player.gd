@@ -1,5 +1,5 @@
+# Sorry guys i'll retire this code :(
 extends CharacterBody2D
-
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -11,8 +11,37 @@ var hooked_local_position = Vector2.ZERO
 var rope_length = 0.0
 var activating_trampolines = []
 
+@export var max_grapple_distance := 1000.0
+@export var rope_change_speed := 50.0
+@export var rope_min_length := 20.0
+
+@onready var target_body: RigidBody2D = get_parent() as RigidBody2D
+
+
+func _ready() -> void:
+	ignore_player()
+
+
+func ignore_player() -> void:
+	# Go up until we reach the root of the ragdoll
+	var player_root = get_parent()
+
+	while player_root.get_parent() != null:
+		player_root = player_root.get_parent()
+
+	# Ignore every physics body belonging to the player
+	for child in player_root.get_children():
+		add_physics_exceptions_recursive(child)
+
+func add_physics_exceptions_recursive(node: Node) -> void:
+	if node is CollisionObject2D:
+		$hook.add_exception(node)
+
+	for child in node.get_children():
+		add_physics_exceptions_recursive(child)
 func _physics_process(delta: float) -> void:
 	
+	# already child to rigidbody so no need
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
@@ -49,13 +78,14 @@ func _physics_process(delta: float) -> void:
 	$hook.target_position = hook_direction * 1000
 	
 	# NOrmal Movement
-	if not hooked:
-		var direction := Input.get_axis("move_left", "move_right")
-		if direction:
-			velocity.x = direction * SPEED
-		else:
-			velocity.x = move_toward(velocity.x, 0, SPEED)
-	
+	# No more normal movement :3
+	#if not hooked:
+		#var direction := Input.get_axis("move_left", "move_right")
+		#if direction:
+			#velocity.x = direction * SPEED
+		#else:
+			#velocity.x = move_toward(velocity.x, 0, SPEED)
+	#
 	
 	# move towards hook position when hooked. 
 	if hooked:

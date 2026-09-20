@@ -1,48 +1,223 @@
 [gd_scene format=3 uid="uid://jydusco7j6c5"]
 
-[ext_resource type="Script" uid="uid://bduea1wf48lk4" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://c67r0aikn1x3j" path="res://assets/tilemap_packed.png" id="2_g2els"]
+[ext_resource type="Script" uid="uid://wmidhqg0kjm6" path="res://scripts/tummy.gd" id="1_dqkch"]
+[ext_resource type="Script" uid="uid://bydual683iul1" path="res://scripts/gun.gd" id="1_qhqgy"]
+[ext_resource type="Script" uid="uid://wwh7c6qyrmar" path="res://scripts/dontfall.gd" id="1_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://c01oletddmc80" path="res://icon.svg" id="3_dqkch"]
 [ext_resource type="Texture2D" uid="uid://c63tetsxh2wec" path="res://assets/rope.png" id="3_qhqgy"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_uwxec"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqkch"]
+size = Vector2(30, 42)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_bx3dq"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_qlg0r"]
 
-[node name="player" type="CharacterBody2D" unique_id=1786901368]
-z_index = 5
-scale = Vector2(2, 2)
-script = ExtResource("1_g2els")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyoq"]
+size = Vector2(12, 22)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1789877542]
-position = Vector2(0, -13)
-scale = Vector2(1.5, 1.5)
-texture = ExtResource("2_g2els")
-region_enabled = true
-region_rect = Rect2(90, 127, 18, 17)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fjrip"]
+size = Vector2(12, 22)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1732662105]
-position = Vector2(0, -11)
-shape = SubResource("CircleShape2D_uwxec")
+[sub_resource type="CanvasTexture" id="CanvasTexture_5cwgd"]
+diffuse_texture = ExtResource("3_dqkch")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1924119049]
-position = Vector2(0, -100)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4r1p"]
+size = Vector2(20, 19)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_d2wvv"]
+
+[node name="Node2D" type="Node2D" unique_id=1077007363]
+script = ExtResource("1_qlg0r")
+
+[node name="Tummy" type="RigidBody2D" parent="." unique_id=394836964]
+position = Vector2(-5, 23)
+script = ExtResource("1_dqkch")
+
+[node name="Camera2D" type="Camera2D" parent="Tummy" unique_id=1568429881]
+position = Vector2(-1, 114)
+zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 
-[node name="hook" type="RayCast2D" parent="." unique_id=2045702476]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tummy" unique_id=194570292]
+shape = SubResource("RectangleShape2D_dqkch")
+
+[node name="Sprite2D" type="Sprite2D" parent="Tummy" unique_id=1597789796]
+position = Vector2(-4.2915344e-06, 1.1444092e-05)
+scale = Vector2(29.999971, 41.99998)
+texture = SubResource("CanvasTexture_qlg0r")
+
+[node name="LULeg" type="RigidBody2D" parent="." unique_id=1169934697]
+position = Vector2(-14, 57)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LULeg" unique_id=583808078]
+shape = SubResource("RectangleShape2D_tuyoq")
+
+[node name="Sprite2D" type="Sprite2D" parent="LULeg" unique_id=1400130628]
+position = Vector2(6.67572e-06, -1.1444092e-05)
+scale = Vector2(11.99999, 21.999973)
+texture = SubResource("CanvasTexture_qlg0r")
+
+[node name="RULeg" type="RigidBody2D" parent="." unique_id=1050581425]
+position = Vector2(4, 57)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RULeg" unique_id=1944593954]
+shape = SubResource("RectangleShape2D_fjrip")
+
+[node name="Sprite2D" type="Sprite2D" parent="RULeg" unique_id=535346394]
+position = Vector2(5.9604645e-06, -1.1444092e-05)
+scale = Vector2(11.99999, 21.999973)
+texture = SubResource("CanvasTexture_qlg0r")
+
+[node name="RDLeg" type="RigidBody2D" parent="." unique_id=590645473]
+position = Vector2(4, 82)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RDLeg" unique_id=672973363]
+shape = SubResource("RectangleShape2D_fjrip")
+
+[node name="Sprite2D" type="Sprite2D" parent="RDLeg" unique_id=1464070931]
+position = Vector2(5.9604645e-06, -7.6293945e-06)
+scale = Vector2(11.99999, 21.999973)
+texture = SubResource("CanvasTexture_qlg0r")
+
+[node name="LDLeg" type="RigidBody2D" parent="." unique_id=223418328]
+position = Vector2(-15, 81)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LDLeg" unique_id=1699114312]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_fjrip")
+
+[node name="Sprite2D" type="Sprite2D" parent="LDLeg" unique_id=1671316365]
+position = Vector2(1.0000067, -7.6293945e-06)
+scale = Vector2(11.99999, 21.999973)
+texture = SubResource("CanvasTexture_qlg0r")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=195367217]
+position = Vector2(-14, 70)
+node_a = NodePath("../LULeg")
+node_b = NodePath("../LDLeg")
+angular_limit_upper = 0.7853982
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="." unique_id=1132687945]
+position = Vector2(4, 70)
+node_a = NodePath("../RULeg")
+node_b = NodePath("../RDLeg")
+angular_limit_upper = 0.7853982
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="." unique_id=251451710]
+position = Vector2(-14, 45)
+node_a = NodePath("../Tummy")
+node_b = NodePath("../LULeg")
+angular_limit_upper = 0.7853982
+
+[node name="PinJoint2D4" type="PinJoint2D" parent="." unique_id=717383990]
+position = Vector2(4, 45)
+node_a = NodePath("../Tummy")
+node_b = NodePath("../RULeg")
+angular_limit_upper = 0.7853982
+
+[node name="LUArm" type="RigidBody2D" parent="." unique_id=1124440566]
+position = Vector2(-30, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LUArm" unique_id=1068442187]
+position = Vector2(0, -1.5258789e-05)
+shape = SubResource("RectangleShape2D_fjrip")
+
+[node name="Sprite2D" type="Sprite2D" parent="LUArm" unique_id=1591305527]
+position = Vector2(6.7949295e-06, -2.2768974e-05)
+scale = Vector2(11.99999, 21.999973)
+texture = SubResource("CanvasTexture_qlg0r")
+
+[node name="LDArm" type="RigidBody2D" parent="." unique_id=919212572]
+position = Vector2(-30, 36)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LDArm" unique_id=99440807]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_fjrip")
+
+[node name="Sprite2D" type="Sprite2D" parent="LDArm" unique_id=481424349]
+position = Vector2(6.67572e-06, 0.9999924)
+scale = Vector2(11.99999, 21.999973)
+texture = SubResource("CanvasTexture_qlg0r")
+
+[node name="RUArm" type="RigidBody2D" parent="." unique_id=1805740186]
+position = Vector2(20, 11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RUArm" unique_id=100531452]
+shape = SubResource("RectangleShape2D_fjrip")
+
+[node name="Sprite2D" type="Sprite2D" parent="RUArm" unique_id=995429710]
+position = Vector2(6.67572e-06, -7.6293945e-06)
+scale = Vector2(11.99999, 21.999973)
+texture = SubResource("CanvasTexture_qlg0r")
+
+[node name="RDArm" type="RigidBody2D" parent="." unique_id=482795069]
+position = Vector2(20, 36)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RDArm" unique_id=307458758]
+shape = SubResource("RectangleShape2D_fjrip")
+
+[node name="Sprite2D" type="Sprite2D" parent="RDArm" unique_id=2028502253]
+position = Vector2(1.001358e-05, 0.5000076)
+scale = Vector2(11.999993, 23.000034)
+texture = SubResource("CanvasTexture_qlg0r")
+
+[node name="Gun" type="Node2D" parent="RDArm" unique_id=1313789444]
+position = Vector2(-20, -36)
+script = ExtResource("1_qhqgy")
+
+[node name="hook" type="RayCast2D" parent="RDArm/Gun" unique_id=973329020]
+position = Vector2(20, 54)
+target_position = Vector2(0, 14)
 collision_mask = 2
 
-[node name="rope" type="Line2D" parent="." unique_id=1969815228]
+[node name="rope" type="Line2D" parent="RDArm/Gun" unique_id=538758086]
+position = Vector2(5.5, 10)
+points = PackedVector2Array(14.5, 45)
 width = 4.0
 texture = ExtResource("3_qhqgy")
 texture_mode = 1
 
-[node name="HitBox" type="Area2D" parent="." unique_id=335376835]
-collision_layer = 0
-collision_mask = 4
+[node name="Sprite2D" type="Sprite2D" parent="RDArm/Gun" unique_id=320508737]
+position = Vector2(20, 55)
+scale = Vector2(0.09375001, 0.0859375)
+texture = SubResource("CanvasTexture_5cwgd")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1793730104]
-position = Vector2(0, -11)
-shape = SubResource("CircleShape2D_bx3dq")
-debug_color = Color(1, 0.003921569, 0, 0.41960785)
+[node name="PinJoint2D5" type="PinJoint2D" parent="." unique_id=1264124482]
+position = Vector2(-30, 26)
+node_a = NodePath("../LUArm")
+node_b = NodePath("../LDArm")
+angular_limit_upper = 0.7853982
 
-[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
+[node name="PinJoint2D6" type="PinJoint2D" parent="." unique_id=1104015551]
+position = Vector2(19, 23)
+node_a = NodePath("../RUArm")
+node_b = NodePath("../RDArm")
+angular_limit_upper = 0.7853982
+
+[node name="PinJoint2D7" type="PinJoint2D" parent="." unique_id=1180473425]
+position = Vector2(-22, 4)
+node_a = NodePath("../Tummy")
+node_b = NodePath("../LUArm")
+angular_limit_upper = 0.7853982
+
+[node name="PinJoint2D8" type="PinJoint2D" parent="." unique_id=891426247]
+position = Vector2(12, 3)
+node_a = NodePath("../Tummy")
+node_b = NodePath("../RUArm")
+angular_limit_upper = 0.7853982
+
+[node name="Head" type="RigidBody2D" parent="." unique_id=1511439986]
+position = Vector2(-5, -12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Head" unique_id=1948361731]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_y4r1p")
+
+[node name="Sprite2D" type="Sprite2D" parent="Head" unique_id=1137184735]
+position = Vector2(-1.9073486e-06, -1.9073486e-06)
+scale = Vector2(20.000004, 20.000004)
+texture = SubResource("CanvasTexture_d2wvv")
+
+[node name="PinJoint2D9" type="PinJoint2D" parent="." unique_id=1401769182]
+position = Vector2(-5, 0)
+node_a = NodePath("../Head")
+node_b = NodePath("../Tummy")

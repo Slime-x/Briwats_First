@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://buc4rcf8cfqjr"]
 
 [ext_resource type="Texture2D" uid="uid://c67r0aikn1x3j" path="res://assets/tilemap_packed.png" id="1_bswci"]
-[ext_resource type="PackedScene" uid="uid://jydusco7j6c5" path="res://scenes/player.tscn" id="2_rus8k"]
 [ext_resource type="FontFile" uid="uid://d3s6lreon8g40" path="res://assets/PixelOperator-Bold.ttf" id="3_rus8k"]
 [ext_resource type="PackedScene" uid="uid://bh5l7c4nuwte0" path="res://scenes/next_level.tscn" id="4_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://duqr4vxxxovdu" path="res://scenes/map_hookonly.tscn" id="5_4nkto"]
+[ext_resource type="PackedScene" uid="uid://bn8uqigqhy61k" path="res://scenes/him.tscn" id="5_fcfvj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5xbjy"]
 texture = ExtResource("1_bswci")
@@ -258,10 +258,6 @@ scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAABAAEAAQACAAEAAAACAAEAAQACAAEAAAADAAEAAQACAAEAAAD9/wEAAQABAAEAAAD+/wEAAQACAAEAAAD//wEAAQACAAEAAAAAAAEAAQACAAEAAAAEAAEAAQADAAEAAAAIAAEAAQAJAAEAAAAJAAEAAQAJAAEAAAAKAAEAAQAJAAEAAAASAAEAAQAJAAEAAAATAAEAAQAJAAEAAAAUAAEAAQAJAAEAAAAcAAEAAQAJAAEAAAAdAAEAAQAJAAEAAAAeAAEAAQAJAAEAAAAhAAEAAQAJAAEAAAAiAAEAAQAJAAEAAAAjAAEAAQAJAAEAAAAkAAEAAQAJAAEAAAAlAAEAAQAJAAEAAAAmAAEAAQAJAAEAAAAnAAEAAQAJAAEAAAAoAAEAAQAJAAEAAAApAAEAAQAJAAEAAAAlAAAAAQAJAAEAAAAmAAAAAQAJAAEAAAAnAAAAAQAJAAEAAAAoAAAAAQAJAAEAAAApAAAAAQAJAAEAAAAqAAEAAQAJAAEAAAArAAEAAQAJAAEAAAAsAAEAAQAJAAEAAAAlAP//AQAIAAMAAAAmAP//AQAIAAMAAAAnAP//AQAIAAMAAAAoAP//AQAIAAMAAAApAP//AQAIAAMAAAA3APr/AQAJAAEAAAA4APr/AQAJAAEAAAA5APr/AQAJAAEAAAA3APv/AQAJAAEAAAA3APz/AQAJAAEAAAA4APv/AQAJAAEAAAA4APz/AQAJAAEAAAA5APv/AQAJAAEAAAA5APz/AQAJAAEAAAA9APr/AQAJAAEAAAA+APr/AQAJAAEAAAA/APr/AQAJAAEAAABAAPr/AQAJAAEAAABBAPr/AQAJAAEAAAAsAPj/AQAJAAEAAAAsAPn/AQAJAAEAAAAsAPr/AQAJAAEAAAAsAPv/AQAJAAEAAAAsAPz/AQAJAAEAAAAsAP3/AQAJAAEAAAA=")
 tile_set = SubResource("TileSet_qtct1")
 
-[node name="player" parent="." unique_id=1786901368 instance=ExtResource("2_rus8k")]
-position = Vector2(-1, -2)
-start_position = Vector2(0, 0)
-
 [node name="Message to players" type="Node" parent="." unique_id=734108822]
 
 [node name="Label" type="Label" parent="Message to players" unique_id=890886323]
@@ -316,3 +312,6 @@ position = Vector2(2358, -239)
 
 [node name="map_hookonly" parent="." unique_id=154707065 instance=ExtResource("5_4nkto")]
 tile_map_data = PackedByteArray("AAAOAPf/AAAJAAAAAAAYAPf/AAAJAAAAAAAkAPf/AAAJAAAAAAAqAPf/AAAJAAAAAAArAPf/AAAJAAAAAAAsAPf/AAAJAAAAAAAxAPr/AAAJAAAAAAAyAPr/AAAJAAAAAAA=")
+
+[node name="player" parent="." unique_id=1494262009 instance=ExtResource("5_fcfvj")]
+position = Vector2(62, -109)

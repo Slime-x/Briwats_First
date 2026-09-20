@@ -255,8 +255,7 @@ sources/0 = SubResource("TileSetAtlasSource_lbhrr")
 [node name="Game" type="Node2D" unique_id=975596420]
 
 [node name="player" parent="." unique_id=1786901368 instance=ExtResource("1_uwrxv")]
-position = Vector2(184, 321)
-start_position = Vector2(100, 50)
+position = Vector2(160, 237)
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=423176285]
 scale = Vector2(2, 2)
