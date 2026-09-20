@@ -1,0 +1,185 @@
+[gd_scene format=3 uid="uid://bn8uqigqhy61k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f4bhu"]
+size = Vector2(30, 42)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_5cwgd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80r4s"]
+size = Vector2(12, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xe6hh"]
+size = Vector2(12, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ii3xr"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_f4bhu"]
+
+[node name="Him" type="Node2D" unique_id=1494262009]
+position = Vector2(625, 316)
+
+[node name="Tummy" type="RigidBody2D" parent="." unique_id=1009011942]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tummy" unique_id=929576980]
+position = Vector2(-5, 23)
+shape = SubResource("RectangleShape2D_f4bhu")
+
+[node name="Sprite2D" type="Sprite2D" parent="Tummy" unique_id=2046806603]
+position = Vector2(-5.000005, 23.000011)
+scale = Vector2(29.999971, 41.99998)
+texture = SubResource("CanvasTexture_5cwgd")
+
+[node name="LULeg" type="RigidBody2D" parent="." unique_id=1488845093]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LULeg" unique_id=1978303608]
+position = Vector2(-14, 57)
+shape = SubResource("RectangleShape2D_80r4s")
+
+[node name="Sprite2D" type="Sprite2D" parent="LULeg" unique_id=1324482300]
+position = Vector2(-13.999992, 56.999985)
+scale = Vector2(11.99999, 21.999973)
+texture = SubResource("CanvasTexture_5cwgd")
+
+[node name="RULeg" type="RigidBody2D" parent="." unique_id=405892384]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RULeg" unique_id=1168694695]
+position = Vector2(4, 57)
+shape = SubResource("RectangleShape2D_xe6hh")
+
+[node name="Sprite2D" type="Sprite2D" parent="RULeg" unique_id=76447922]
+position = Vector2(4.0000057, 56.999985)
+scale = Vector2(11.99999, 21.999973)
+texture = SubResource("CanvasTexture_5cwgd")
+
+[node name="RDLeg" type="RigidBody2D" parent="." unique_id=48938479]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RDLeg" unique_id=211332857]
+position = Vector2(4, 82)
+shape = SubResource("RectangleShape2D_xe6hh")
+
+[node name="Sprite2D" type="Sprite2D" parent="RDLeg" unique_id=118690819]
+position = Vector2(4.0000057, 81.999985)
+scale = Vector2(11.99999, 21.999973)
+texture = SubResource("CanvasTexture_5cwgd")
+
+[node name="LDLeg" type="RigidBody2D" parent="." unique_id=579212058]
+position = Vector2(-15, 81)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LDLeg" unique_id=460738579]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_xe6hh")
+
+[node name="Sprite2D" type="Sprite2D" parent="LDLeg" unique_id=1649402321]
+position = Vector2(1.0000067, -7.6293945e-06)
+scale = Vector2(11.99999, 21.999973)
+texture = SubResource("CanvasTexture_5cwgd")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=1513718558]
+position = Vector2(-14, 70)
+node_a = NodePath("../LULeg")
+node_b = NodePath("../LDLeg")
+angular_limit_upper = 0.7853982
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="." unique_id=1651985829]
+position = Vector2(4, 70)
+node_a = NodePath("../RULeg")
+node_b = NodePath("../RDLeg")
+angular_limit_upper = 0.7853982
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="." unique_id=1889261175]
+position = Vector2(-14, 45)
+node_a = NodePath("../Tummy")
+node_b = NodePath("../LULeg")
+angular_limit_upper = 0.7853982
+
+[node name="PinJoint2D4" type="PinJoint2D" parent="." unique_id=979770]
+position = Vector2(4, 45)
+node_a = NodePath("../Tummy")
+node_b = NodePath("../RULeg")
+angular_limit_upper = 0.7853982
+
+[node name="LUArm" type="RigidBody2D" parent="." unique_id=1496033030]
+position = Vector2(-30, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LUArm" unique_id=17677796]
+position = Vector2(0, -1.5258789e-05)
+shape = SubResource("RectangleShape2D_xe6hh")
+
+[node name="Sprite2D" type="Sprite2D" parent="LUArm" unique_id=460348668]
+position = Vector2(6.7949295e-06, -2.2768974e-05)
+scale = Vector2(11.99999, 21.999973)
+texture = SubResource("CanvasTexture_5cwgd")
+
+[node name="LDArm" type="RigidBody2D" parent="." unique_id=671919192]
+position = Vector2(-30, 36)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LDArm" unique_id=1940683370]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_xe6hh")
+
+[node name="Sprite2D" type="Sprite2D" parent="LDArm" unique_id=942223151]
+position = Vector2(6.67572e-06, 0.9999924)
+scale = Vector2(11.99999, 21.999973)
+texture = SubResource("CanvasTexture_5cwgd")
+
+[node name="RUArm" type="RigidBody2D" parent="." unique_id=1034718709]
+position = Vector2(20, 11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RUArm" unique_id=2062192031]
+shape = SubResource("RectangleShape2D_xe6hh")
+
+[node name="Sprite2D" type="Sprite2D" parent="RUArm" unique_id=312864958]
+position = Vector2(6.67572e-06, -7.6293945e-06)
+scale = Vector2(11.99999, 21.999973)
+texture = SubResource("CanvasTexture_5cwgd")
+
+[node name="RDArm" type="RigidBody2D" parent="." unique_id=1459310962]
+position = Vector2(20, 36)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RDArm" unique_id=1526158963]
+shape = SubResource("RectangleShape2D_xe6hh")
+
+[node name="Sprite2D" type="Sprite2D" parent="RDArm" unique_id=2068136817]
+position = Vector2(1.001358e-05, 0.5000076)
+scale = Vector2(11.999993, 23.000034)
+texture = SubResource("CanvasTexture_5cwgd")
+
+[node name="PinJoint2D5" type="PinJoint2D" parent="." unique_id=1951818740]
+position = Vector2(-30, 26)
+node_a = NodePath("../LUArm")
+node_b = NodePath("../LDArm")
+angular_limit_upper = 0.7853982
+
+[node name="PinJoint2D6" type="PinJoint2D" parent="." unique_id=35704348]
+position = Vector2(19, 23)
+node_a = NodePath("../RUArm")
+node_b = NodePath("../RDArm")
+angular_limit_upper = 0.7853982
+
+[node name="PinJoint2D7" type="PinJoint2D" parent="." unique_id=1322909039]
+position = Vector2(-22, 4)
+node_a = NodePath("../Tummy")
+node_b = NodePath("../LUArm")
+angular_limit_upper = 0.7853982
+
+[node name="PinJoint2D8" type="PinJoint2D" parent="." unique_id=1730055313]
+position = Vector2(12, 3)
+node_a = NodePath("../Tummy")
+node_b = NodePath("../RUArm")
+angular_limit_upper = 0.7853982
+
+[node name="Head" type="RigidBody2D" parent="." unique_id=1789436742]
+position = Vector2(-5, -12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Head" unique_id=1919865823]
+shape = SubResource("RectangleShape2D_ii3xr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Head" unique_id=613100296]
+position = Vector2(-1.9073486e-06, -1.9073486e-06)
+scale = Vector2(20.000004, 20.000004)
+texture = SubResource("CanvasTexture_f4bhu")
+
+[node name="PinJoint2D9" type="PinJoint2D" parent="." unique_id=51034470]
+position = Vector2(-5, 0)
+node_a = NodePath("../Head")
+node_b = NodePath("../Tummy")
