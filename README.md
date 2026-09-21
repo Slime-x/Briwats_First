@@ -6,7 +6,7 @@ We didn't follow harvest theme :(
 ## How to play?
 
 You can hook to walls by clicking on them using your mouse.
-Pulled the rope by pressing 'F' & Make the rope longer with 'R'
+Pulled the rope by pressing 'R'. It should be easier to play using R a lot
 Press 'A' and 'D' to move left and right while hooking
 Press [ESC] to change unlocked level. 
 Press W A S D and [Jump] to move normally. 
