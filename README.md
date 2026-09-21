@@ -5,7 +5,12 @@ A game made in Godot about a guy who uses a gun to hook to walls there is around
 We didn't follow harvest theme :(
 ## How to play?
 
-You can hook to walls by clicking on them using your mouse And you can get pulled towards them by pressing 'R' Also you can press 'A' and 'D' to move left and right while hooking
+You can hook to walls by clicking on them using your mouse.
+Pulled the rope by pressing 'F' & Make the rope longer with 'R'
+Press 'A' and 'D' to move left and right while hooking
+Press [ESC] to change unlocked level. 
+Press W A S D and [Jump] to move normally. 
+
 
 # AI declarations
   ### Week 1
@@ -13,6 +18,9 @@ You can hook to walls by clicking on them using your mouse And you can get pulle
    
   Anass - I didn't rely on AI for code creation and only used it for debugging and as an advanced search engine to figure out how to solve certain problems in godot and gdscript
 
+  Slime -  I used AI for like 5line of code probably. I didnt know why my hook wasn't working. It was just a script typing mistake.. But yeah nth else. It should be pretty clean. The comments in the script are written by me btw. DONT call it AI. I was writing them for my teammates. 
+
 # Credits:
 
 Pistole - Google images
+Tilemap and other assets - Yt tutorial. I had it saved in my computer and used it for the moment but didnt change later. 
