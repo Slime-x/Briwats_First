@@ -34,10 +34,14 @@ diffuse_texture = ExtResource("4_ur7pv")
 [sub_resource type="CanvasTexture" id="CanvasTexture_tuyoq"]
 diffuse_texture = ExtResource("4_ur7pv")
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_qlg0r"]
+[sub_resource type="CanvasTexture" id="CanvasTexture_oprun"]
+diffuse_texture = ExtResource("3_smehm")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_3v2ag"]
 diffuse_texture = ExtResource("4_ur7pv")
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_f1ej7"]
+diffuse_texture = ExtResource("3_smehm")
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_jej6c"]
 diffuse_texture = ExtResource("4_ur7pv")
@@ -153,9 +157,9 @@ position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_fjrip")
 
 [node name="Sprite2D" type="Sprite2D" parent="LUArm" unique_id=1591305527]
-position = Vector2(1.4999999, -2.2768974e-05)
-scale = Vector2(8, 16)
-texture = SubResource("CanvasTexture_qlg0r")
+position = Vector2(1.4999995, -1.9073486e-06)
+scale = Vector2(0.1125, 0.087500006)
+texture = SubResource("CanvasTexture_oprun")
 
 [node name="LDArm" type="RigidBody2D" parent="." unique_id=919212572]
 position = Vector2(-22, 28)
@@ -177,9 +181,9 @@ position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_fjrip")
 
 [node name="Sprite2D" type="Sprite2D" parent="RUArm" unique_id=995429710]
-position = Vector2(-0.99999547, 2.8610102e-06)
-scale = Vector2(8, 16)
-texture = SubResource("CanvasTexture_qlg0r")
+position = Vector2(-0.99999976, 4.7683716e-07)
+scale = Vector2(0.099999994, 0.0875)
+texture = SubResource("CanvasTexture_f1ej7")
 
 [node name="RDArm" type="RigidBody2D" parent="." unique_id=482795069]
 position = Vector2(13, 28)

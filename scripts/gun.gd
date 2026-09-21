@@ -1,7 +1,7 @@
 extends Node2D
 
 @export var max_grapple_distance := 1000.0
-@export var rope_change_speed := 200.0
+@export var rope_change_speed := 20.0
 @export var rope_min_length := 20.0
 
 # How strongly R/F pulls the hand toward the hook
@@ -12,7 +12,6 @@ var hook_position := Vector2.ZERO
 var rope_length := 0.0
 
 @onready var target_body: RigidBody2D = get_parent() as RigidBody2D
-
 
 func _physics_process(delta: float) -> void:
 	if target_body == null:
@@ -36,8 +35,8 @@ func _physics_process(delta: float) -> void:
 
 	# Grapple physics
 	if hooked:
-		# Hold R or F to pull toward hook
-		if Input.is_key_pressed(KEY_R) or Input.is_key_pressed(KEY_F):
+		# Hold R to pull towards hook
+		if Input.is_key_pressed(KEY_R):
 			rope_length = max(
 				rope_length - rope_change_speed * delta,
 				rope_min_length
@@ -54,6 +53,7 @@ func _physics_process(delta: float) -> void:
 			Vector2.ZERO,
 			$rope.to_local(hook_position)
 		])
+		
 	else:
 		$rope.clear_points()
 
@@ -86,7 +86,7 @@ func release_hook() -> void:
 	$rope.clear_points()
 
 	# Give the hand some momentum when released
-	target_body.linear_velocity *= 1.5
+	target_body.linear_velocity *= 1.2
 
 func pull_toward_hook() -> void:
 	var to_hook := hook_position - target_body.global_position
@@ -97,7 +97,6 @@ func pull_toward_hook() -> void:
 
 	var direction := to_hook.normalized()
 
-	# Pull the right hand toward the hook
 	target_body.apply_central_force(
 		direction * grapple_pull_strength
 	)
@@ -112,7 +111,6 @@ func apply_rope_constraint() -> void:
 
 	var rope_direction := to_hook.normalized()
 
-	# Remove velocity moving directly away from the hook
 	var radial_velocity := target_body.linear_velocity.dot(rope_direction)
 
 	if radial_velocity < 0:

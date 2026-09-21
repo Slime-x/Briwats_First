@@ -53,6 +53,8 @@ func next_lvl():
 	get_tree().change_scene_to_file("res://scenes/level_" + str(level) + ".tscn")
 
 
+# NOTE TO SLIME: wtf is this vro :sob:
+# the ui is cooked :wilted_rose:
 func _on_level_1_pressed() -> void:
 	level = 1
 	call_deferred("next_lvl")

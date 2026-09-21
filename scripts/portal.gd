@@ -1,3 +1,4 @@
+# Sorry guys i'll have to also retire this code :(
 extends Area2D
 
 @export var destination: Area2D

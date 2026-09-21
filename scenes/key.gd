@@ -13,6 +13,6 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	var t = get_node("../RigidBody2D")
 	t.revive()
-	print("FOUND: ", t)
-	print("CALLING REVIVE")
+	print("found: ", t)
+	print("calling revive")
 	queue_free()

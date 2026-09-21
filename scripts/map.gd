@@ -1,5 +1,5 @@
 extends Node
-
+# This thing stores the Godot "signals" for collisions and such
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
