@@ -6,7 +6,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	print($LULeg.position.y)
+	#pri/nt($LULeg.position.y)
 	if $LULeg.position.y > 2000:
 		reset_ragdoll()
 

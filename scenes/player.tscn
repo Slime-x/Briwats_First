@@ -42,6 +42,8 @@ diffuse_texture = ExtResource("4_ur7pv")
 [sub_resource type="CanvasTexture" id="CanvasTexture_jej6c"]
 diffuse_texture = ExtResource("4_ur7pv")
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_f4bhu"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4r1p"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_d2wvv"]
@@ -245,6 +247,15 @@ angular_limit_upper = 0.7853982
 
 [node name="Head" type="RigidBody2D" parent="." unique_id=1511439986]
 position = Vector2(-5, -12)
+
+[node name="Hat" type="Node2D" parent="Head" unique_id=283551331]
+position = Vector2(0, -10)
+scale = Vector2(2, 2)
+
+[node name="Sprite2D" type="Sprite2D" parent="Head/Hat" unique_id=1058140771]
+position = Vector2(-0.50000024, 0)
+scale = Vector2(7, 2)
+texture = SubResource("CanvasTexture_f4bhu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Head" unique_id=1948361731]
 position = Vector2(0, 2)

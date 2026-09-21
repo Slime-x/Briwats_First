@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bxclg5j60mjbr"]
+
+[node name="Level9" type="Node2D" unique_id=2094991376]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1743254687]
+
+[node name="Label" type="Label" parent="." unique_id=812704027]
+offset_left = -327.0
+offset_top = -139.0
+offset_right = 8.0
+offset_bottom = 2.0
+scale = Vector2(2, 2)
+text = "That's it lads!
+see y'all in the next one!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+uppercase = true

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cppcdts13ubxd"]
 
 [ext_resource type="Script" uid="uid://c5pn5u5u2lypj" path="res://scenes/key.gd" id="1_fttkb"]
-[ext_resource type="PackedScene" uid="uid://blpw0l31fypo7" path="res://scenes/map.tscn" id="1_yk2u2"]
+[ext_resource type="Texture2D" uid="uid://bhocnd37yhp1e" path="res://bird.jpg" id="2_fttkb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bx3dq"]
 size = Vector2(36, 24)
@@ -12,8 +12,18 @@ script = ExtResource("1_fttkb")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=240664034]
 shape = SubResource("RectangleShape2D_bx3dq")
 
-[node name="map" parent="." unique_id=1940241841 instance=ExtResource("1_yk2u2")]
-position = Vector2(-18, 18)
-tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 7, 0, 1, 0, 0, 0)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1571548030]
+position = Vector2(9.536743e-07, -3.999998)
+scale = Vector2(0.2638889, 0.25833333)
+texture = ExtResource("2_fttkb")
+
+[node name="Label" type="Label" parent="." unique_id=1370229906]
+offset_left = -92.0
+offset_top = -130.0
+offset_right = 129.0
+offset_bottom = -55.0
+text = "You finally found bob!
+bob is a chick from kentucky
+PLEASE save bob!!!!!"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

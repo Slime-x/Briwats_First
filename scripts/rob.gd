@@ -9,6 +9,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func _on_rigid_body_2d_body_entered(body: Node2D) -> void:
+	print(body.name)
 	
 func revive():
 	print("REVIVE FUNCTION CALLED")
@@ -17,9 +20,3 @@ func revive():
 	set_physics_process(true)
 
 	$CollisionShape2D.set_deferred("disabled", false)
-	$Label2.set_deferred("visible", true)
-
-func _on_body_entered(body: Node2D) -> void:
-	# This keeps giving errors
-	get_tree().change_scene_to_file("res://scenes/level_9.tscn")
-	queue_free()
