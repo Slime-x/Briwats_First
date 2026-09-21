@@ -22,5 +22,6 @@ Press W A S D and [Jump] to move normally.
 
 # Credits:
 
-Pistole - Google images
+Pistole - Google images <br>
 Tilemap and other assets - Yt tutorial. I had it saved in my computer and used it for the moment but didnt change later. 
+link: https://kenney.nl/assets/new-platformer-pack
