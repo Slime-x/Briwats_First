@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://crefiihby4cxj"]
+
+[node name="Level10" type="Node2D" unique_id=551067480]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=190454047]
+scale = Vector2(5, 5)
+
+[node name="Label" type="Label" parent="." unique_id=1350616631]
+offset_left = -76.0
+offset_top = -8.0
+offset_right = 68.0
+offset_bottom = 15.0
+text = "TO BE CONTINUED"

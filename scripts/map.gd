@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 	pass
 	
 func revive():
-	print("REVIVE FUNCTION CALLED")
+	print("got called from elsewhere")
 	$Sprite2D.set_deferred("visible", true)
 	set_process(true)
 	set_physics_process(true)
@@ -22,4 +22,6 @@ func revive():
 func _on_body_entered(body: Node2D) -> void:
 	# This keeps giving errors
 	get_tree().change_scene_to_file("res://scenes/level_9.tscn")
-	queue_free()
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://scenes/level_10.tscn")

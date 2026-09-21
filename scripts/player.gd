@@ -1,4 +1,5 @@
 # Sorry guys i'll retire this code :(
+# We can't make a Ragdoll with a CharacterBody2D
 extends CharacterBody2D
 
 const SPEED = 300.0

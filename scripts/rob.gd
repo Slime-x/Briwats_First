@@ -14,7 +14,7 @@ func _on_rigid_body_2d_body_entered(body: Node2D) -> void:
 	print(body.name)
 	
 func revive():
-	print("REVIVE FUNCTION CALLED")
+	print("revive functional called")
 	$Sprite2D.set_deferred("visible", true)
 	set_process(true)
 	set_physics_process(true)

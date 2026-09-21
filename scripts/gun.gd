@@ -18,9 +18,7 @@ func _physics_process(delta: float) -> void:
 	if target_body == null:
 		return
 
-	# -----------------------------
 	# Change rope length
-	# -----------------------------
 	if hooked and Input.is_action_pressed("ROPE_UP"):
 		rope_length = max(
 			rope_length - rope_change_speed * delta,
@@ -31,16 +29,12 @@ func _physics_process(delta: float) -> void:
 		rope_length += rope_change_speed * delta
 
 
-	# -----------------------------
 	# Aim the hook at the mouse
-	# -----------------------------
 	var mouse_local := to_local(get_global_mouse_position())
 	$hook.target_position = mouse_local.limit_length(max_grapple_distance)
 
 
-	# -----------------------------
 	# Grapple physics
-	# -----------------------------
 	if hooked:
 		# Hold R or F to pull toward hook
 		if Input.is_key_pressed(KEY_R) or Input.is_key_pressed(KEY_F):
@@ -54,9 +48,7 @@ func _physics_process(delta: float) -> void:
 		apply_rope_constraint()
 
 
-	# -----------------------------
 	# Draw rope
-	# -----------------------------
 	if hooked:
 		$rope.points = PackedVector2Array([
 			Vector2.ZERO,
@@ -95,7 +87,6 @@ func release_hook() -> void:
 
 	# Give the hand some momentum when released
 	target_body.linear_velocity *= 1.5
-
 
 func pull_toward_hook() -> void:
 	var to_hook := hook_position - target_body.global_position
