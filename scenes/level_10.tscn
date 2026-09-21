@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://jydusco7j6c5" path="res://scenes/player.tscn" id="1_fl27d"]
 [ext_resource type="PackedScene" uid="uid://blpw0l31fypo7" path="res://scenes/map.tscn" id="2_ofuys"]
-[ext_resource type="Texture2D" uid="uid://bhocnd37yhp1e" path="res://bird.jpg" id="3_ofuys"]
-[ext_resource type="Texture2D" uid="uid://dawaf6df6ib64" path="res://drip.jpg" id="4_21d8y"]
+[ext_resource type="Texture2D" uid="uid://bhocnd37yhp1e" path="res://assets/bird.jpg" id="3_ofuys"]
+[ext_resource type="Texture2D" uid="uid://dawaf6df6ib64" path="res://assets/drip.jpg" id="4_21d8y"]
 
 [node name="Level10" type="Node2D" unique_id=551067480]
 

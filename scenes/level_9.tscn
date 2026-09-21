@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://blpw0l31fypo7" path="res://scenes/map.tscn" id="1_c86wj"]
 [ext_resource type="PackedScene" uid="uid://jydusco7j6c5" path="res://scenes/player.tscn" id="2_npjya"]
-[ext_resource type="Texture2D" uid="uid://b7xxkk4h1cc44" path="res://kfc.jpeg" id="3_npjya"]
-[ext_resource type="Texture2D" uid="uid://bhocnd37yhp1e" path="res://bird.jpg" id="4_541qs"]
-[ext_resource type="Texture2D" uid="uid://dawaf6df6ib64" path="res://drip.jpg" id="5_desnu"]
-[ext_resource type="Texture2D" uid="uid://btpkcrwpkdxxr" path="res://pistol.png" id="6_2q8u2"]
+[ext_resource type="Texture2D" uid="uid://b7xxkk4h1cc44" path="res://assets/kfc.jpeg" id="3_npjya"]
+[ext_resource type="Texture2D" uid="uid://bhocnd37yhp1e" path="res://assets/bird.jpg" id="4_541qs"]
+[ext_resource type="Texture2D" uid="uid://dawaf6df6ib64" path="res://assets/drip.jpg" id="5_desnu"]
+[ext_resource type="Texture2D" uid="uid://btpkcrwpkdxxr" path="res://assets/pistol.png" id="6_2q8u2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5cwgd"]
 size = Vector2(316, 220)
