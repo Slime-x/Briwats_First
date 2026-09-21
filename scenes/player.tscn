@@ -61,7 +61,7 @@ position = Vector2(-5, 23)
 script = ExtResource("1_dqkch")
 
 [node name="Camera2D" type="Camera2D" parent="Tummy" unique_id=1568429881]
-position = Vector2(-1, 114)
+position = Vector2(1, 0)
 position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tummy" unique_id=194570292]
